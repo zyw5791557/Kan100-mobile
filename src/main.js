@@ -38,9 +38,14 @@ const router = new VueRouter({
 
 // 全局 axiosBaseURL
 Vue.prototype.$BASE_URL = process.env.API_ROOT;
-
+// 路由前置守卫
 router.beforeEach((to, from, next) => {
+	NProgress.start();
 	next();
+})
+// 路由后置守卫
+router.afterEach((to, from) => {
+	NProgress.done();
 })
 
 
