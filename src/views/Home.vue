@@ -1,10 +1,14 @@
 <script>
 import BaseHeader from '../components/BaseHeader';
 import BaseNav from '../components/BaseNav';
+import BaseBanner from '../components/BaseBanner';
+import BaseHotModule from '../components/BaseHotModule';
 export default {
 	components: {
 		BaseHeader,
-		BaseNav
+		BaseNav,
+		BaseBanner,
+		BaseHotModule
 	},
 	data () {
 		return {
@@ -18,7 +22,7 @@ export default {
 		}
 	},
 	mounted() {
-
+		      
 	}
 }
 </script>
@@ -27,6 +31,8 @@ export default {
 	<div class="home">
 		<base-header :searchPlaceholderVal="base_header_searchPlaceholderVal" @search="baseSearch"></base-header>
 		<base-nav></base-nav>
+		<base-banner></base-banner>
+		<base-hot-module></base-hot-module>
 	</div>
 </template>
 

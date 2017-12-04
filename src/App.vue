@@ -56,5 +56,16 @@ input::-moz-placeholder, textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
 }  
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */  
 	color: #b3b3b3;  
+}
+div {
+    font-size: 12px; // 默认写上dpr为1的fontSize
+}
+
+[data-dpr="2"] div {
+    font-size: 24px;
+}
+
+[data-dpr="3"] div {
+    font-size: 36px;
 }  
 </style>
