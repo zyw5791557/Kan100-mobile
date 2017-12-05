@@ -98,10 +98,7 @@ export default {
                 letter-spacing: 4px;
                 margin-right: .592593rem;
                 box-sizing: border-box;
-                font-size: 12px;
-                &:hover {
-                    text-decoration: none;
-                }
+                font-size: 16px;
                 &.router-link-exact-active {
                     color: #ff6a1f;
                     &:after {
@@ -135,10 +132,10 @@ export default {
     }
 
     [data-dpr="2"] .nav ul li a {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     [data-dpr="3"] .nav ul li a {
-        font-size: 52px;
+        font-size: 48px;
     }
 </style>

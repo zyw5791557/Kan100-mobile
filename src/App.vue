@@ -19,6 +19,7 @@ export default {
 
 <style lang="scss">
 @import url('./assets/style/common/normalize.css');
+@import url('./assets/style/common/common.css');
 .fade-enter-active,
 .fade-leave-active {
 	transition: all .3s ease;

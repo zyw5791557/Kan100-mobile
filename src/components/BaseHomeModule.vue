@@ -1,81 +1,32 @@
 <script>
 export default {
+    props: {
+        data: {
+            type: Object,
+            required: true
+        }
+    },
     data () {
         return {
-            hotModuleData: [
-                {   
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                    catname: '电视剧',
-                    collect: '更新至40集',
-                    score: '',
-                    title: '猎场',
-                    des: '郑秋冬拆骗局攻陈修风'
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                    catname: '',
-                    collect: '更新至22集',
-                    score: '',
-                    title: '九州海上牧云记',
-                    des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                    catname: '',
-                    collect: '11-28期',
-                    score: '',
-                    title: '演员的诞生被被被被猩猩嫌弃',
-                    des: '章子怡：只有她会这样对我'
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                    catname: '新片',
-                    collect: '',
-                    score: '9.1',
-                    title: '追捕',
-                    des: '吴宇森展教科书式暴力美学'
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                    catname: '',
-                    collect: '更新至40集',
-                    score: '',
-                    title: '我的！体育老师',
-                    des: '小米心忧马克患老年痴呆老年痴呆'
-                }, 
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                    catname: '专题',
-                    collect: '',
-                    score: '',
-                    title: 'NBA十佳妖星绝杀勇士啊啊啊啊',
-                    des: '看哭！40岁卡特扣出青春'
-                }
-            ]
+            loadData: this.data
         }
     }
 }
 </script>
 
 <template>
-    <section id="base-hot-module">
+    <section id="base-home-module">
         <div class="mainer">
             <div class="header-module">
-                <h2>重磅热播</h2>
+                <h2>{{ loadData.type }}</h2>
                 <a href="javascript:;">
-                    <span>换一换</span>
+                    <span>更多</span>
                     <i></i>
                 </a>
             </div>
             <div class="m-pic-list">
                 <ul>
-                    <li v-for="(item,index) in hotModuleData" :key="index">
+                    <li v-for="(item,index) in loadData.homeModuleData" :key="index" :class="{ branch: index === 0 }">
                         <div class="piclist-img">
                             <router-link class="piclist-link" :to="item.url" :title="item.title" :style="`background-image: url(${item.img})`">
                                 <div class="c-rt">
@@ -105,7 +56,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    #base-hot-module {
+    #base-home-module {
+        padding-top: .425926rem;
         .mainer {
             letter-spacing: 1px;
             margin: 0 .277778rem;
@@ -132,7 +84,7 @@ export default {
                         height: .314815rem;
                         border-radius: 50%;
                         margin-left: .111111rem;
-                        background: url('/static/images/change.png') no-repeat center;
+                        background: url('/static/images/more.png') no-repeat center;
                     }
                 }
             }
@@ -145,7 +97,9 @@ export default {
                 flex-wrap: wrap;
                 li {
                     width: 4.657407rem;
-
+                    &.branch {
+                        width: 100%;
+                    }
                 }
             }
             .piclist-img {
@@ -206,6 +160,7 @@ export default {
                     line-height: .694444rem;
                     overflow: hidden;
                     text-align: left;
+                    width: 100%;
                     a {
                         color: #1a1a1a;
                     }
@@ -224,7 +179,7 @@ export default {
     }
 
     // 根据 data-dpr 设置字体大小
-    #base-hot-module {
+    #base-home-module {
         .mainer {
             .header-module {
                 h2 {
@@ -255,7 +210,7 @@ export default {
         }
     }
 
-    [data-dpr="2"] #base-hot-module {
+    [data-dpr="2"] #base-home-module {
         .mainer {
             .header-module {
                 h2 {
@@ -286,7 +241,7 @@ export default {
         }
     }
 
-    [data-dpr="3"] #base-hot-module {
+    [data-dpr="3"] #base-home-module {
         .mainer {
             .header-module {
                 h2 {

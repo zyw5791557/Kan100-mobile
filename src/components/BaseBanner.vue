@@ -56,6 +56,7 @@ export default {
                 slidesPerView: "auto",  // 设置slider容器能够同时显示的slides数量(carousel模式)。
                 loopedSlides: 5,        // 搭配 slidesPerView 设置,一般设置 slides 的数量
                 centeredSlides: true,   // centeredSlides true 滑块居中
+                autoplay: true,         // 是否自动播放
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
@@ -77,7 +78,7 @@ export default {
                     <a :href="item.url" :style="`background-image: url(${item.img})`">
                         <div class="c-lb">
                             <h3>{{ item.content.title }}</h3>
-                            <p>{{ item.content.dec }}</p>
+                            <p class="text-ellipsis">{{ item.content.dec }}</p>
                         </div>
                     </a>
                 </div>
@@ -97,17 +98,18 @@ export default {
         .swiper-slide {
             width: 95%;
             margin: 0 .074074rem;
-            background-color: palevioletred;
             border-radius: .092593rem;
             a {
                 display: block;
                 width: 100%;
                 height: 100%;
                 position: relative;
-                background: url('http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg') no-repeat center;
+                background-repeat: no-repeat;
+                background-position: center;
                 background-size: cover;
                 border-radius: .092593rem;
                 box-shadow: 0 -150px 90px 0px rgba(0, 0, 0, 0.4) inset;
+                color: #fff;
                 .c-lb {
                     position: absolute;
                     left: .305556rem;
@@ -118,9 +120,6 @@ export default {
                     p {
                         margin-top: .212963rem;
                         width: 6.518519rem;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
                     }
                 }
             }
