@@ -10,6 +10,14 @@ export default {
         return {
             loadData: this.data
         }
+    },
+    filters: {
+        scoreBeforeFilter (val) {
+            return val.substr(0,2);
+        },
+        scoreAfterFilter (val) {
+            return val.substr(-1);
+        }
     }
 }
 </script>
@@ -35,7 +43,8 @@ export default {
                                 <div class="c-lb">
                                     <span class="c-date" v-if="item.collect">{{ item.collect }}</span>
                                     <span class="c-date c-date-score">
-                                        <i class="score-item" v-if="item.score">{{ item.score }}</i>
+                                        <i class="score-item-before" v-if="item.score">{{ item.score | scoreBeforeFilter }}</i
+                                        ><i class="score-item-after" v-if="item.score">{{ item.score | scoreAfterFilter }}</i>
                                     </span>
                                 </div>
                             </router-link>
@@ -156,7 +165,7 @@ export default {
                     line-height: .407407rem;
                     overflow: hidden;
                     text-align: left;
-                    width: 100%;
+                    width: 96%;
                     a {
                         color: #1a1a1a;
                     }
@@ -167,6 +176,7 @@ export default {
                     line-height: .342593rem;
                     overflow: hidden;
                     text-align: left;
+                    width: 96%;
                     a {
                         color: #999;
                     }
@@ -193,6 +203,9 @@ export default {
                 }
                 .c-date-score {
                     font-size: 16px;
+                    .score-item-after {
+                        font-size: 12px;
+                    }
                 }
             }
             .piclist-title {
@@ -223,6 +236,9 @@ export default {
                 }
                 .c-date-score {
                     font-size: 36px;
+                    .score-item-after {
+                        font-size: 24px;
+                    }
                 }
             }
             .piclist-title {
@@ -254,6 +270,9 @@ export default {
                 }
                 .c-date-score {
                     font-size: 48px;
+                    .score-item-after {
+                        font-size: 36px;
+                    }
                 }
             }
             .piclist-title {

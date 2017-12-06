@@ -170,7 +170,7 @@ export default {
                     line-height: .407407rem;
                     overflow: hidden;
                     text-align: left;
-                    width: 100%;
+                    width: 96%;
                     a {
                         color: #1a1a1a;
                     }
@@ -181,6 +181,7 @@ export default {
                     line-height: .342593rem;
                     overflow: hidden;
                     text-align: left;
+                    width: 96%;
                     a {
                         color: #999;
                     }
