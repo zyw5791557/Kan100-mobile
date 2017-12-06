@@ -1,49 +1,14 @@
 <script>
 export default {
+    props: {
+        data: {
+            type: Array,
+            required: true
+        }
+    },
     data () {
         return {
-            bannerData: [
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                }
-            ]
+            loadData: this.data
         }
     },
     methods: {
@@ -71,10 +36,10 @@ export default {
 </script>
 
 <template>
-    <section id="base-banner">
+    <section id="base-banner" v-once>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				<div v-for="(item,index) in bannerData" :key="index" class="swiper-slide" title="" >
+				<div v-for="(item,index) in loadData" :key="index" class="swiper-slide" title="" >
                     <a :href="item.url" :style="`background-image: url(${item.img})`">
                         <div class="c-lb">
                             <h3>{{ item.content.title }}</h3>

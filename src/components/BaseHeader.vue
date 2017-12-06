@@ -22,7 +22,7 @@ export default {
 
 <template>
     <header id="header">
-        <router-link :to="{ name: 'Home' }" class="logo">
+        <router-link :to="{ name: 'HomeView' }" class="logo">
 
         </router-link>
         <div class="base-search">

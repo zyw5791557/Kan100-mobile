@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <footer id="footer">
+    <footer id="footer" v-once>
         <div class="logo">
             <img src="/static/images/footer-logo.png" alt="">
         </div>

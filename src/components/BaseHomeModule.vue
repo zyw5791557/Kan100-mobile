@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <section id="base-home-module">
+    <section id="base-home-module" v-once>
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
@@ -26,7 +26,7 @@ export default {
             </div>
             <div class="m-pic-list">
                 <ul>
-                    <li v-for="(item,index) in loadData.homeModuleData" :key="index" :class="{ branch: index === 0 }">
+                    <li v-for="(item,index) in loadData.piclistData" :key="index" :class="{ branch: index === 0 }">
                         <div class="piclist-img">
                             <router-link class="piclist-link" :to="item.url" :title="item.title" :style="`background-image: url(${item.img})`">
                                 <div class="c-rt">

@@ -5,52 +5,40 @@ export default {
             navLinks: [
                 {
                     name: '首页',
-                    routerName: 'Home'
+                    routerName: 'HomeView'
                 },
                 {
                     name: '电影',
-                    routerName: 's'
+                    routerName: 'MovieView'
                 },
                 {
                     name: '电视剧',
-                    routerName: 's'
+                    routerName: 'TeleplayView'
                 },
                 {
                     name: '综艺',
-                    routerName: 's'
+                    routerName: 'ShowView'
                 },
                 {
                     name: '动漫',
-                    routerName: 's'
+                    routerName: 'AnimeView'
                 },
                 {
                     name: '明星',
-                    routerName: 's'
+                    routerName: 'StarView'
                 },
                 {
                     name: '搞笑',
-                    routerName: 's'
+                    routerName: 'FunnyView'
                 },
                 {
-                    name: '搞笑',
-                    routerName: 's'
+                    name: '资讯',
+                    routerName: 'NewView'
                 },
                 {
-                    name: '搞笑',
-                    routerName: 's'
-                },
-                {
-                    name: '搞笑',
-                    routerName: 's'
-                },
-                {
-                    name: '搞笑',
-                    routerName: 's'
-                },
-                {
-                    name: '搞笑',
-                    routerName: 's'
-                },
+                    name: '专题',
+                    routerName: 'SpecialView'
+                }
             ]
         }
     }
@@ -58,7 +46,7 @@ export default {
 </script>
 
 <template>
-    <nav class="nav">
+    <nav class="nav" v-once>
         <div class="content">
             <ul>
                 <li v-for="(item, index) in navLinks" :key="index">
@@ -87,6 +75,11 @@ export default {
             overflow-x:scroll;
             overflow-y:hidden;
             &::-webkit-scrollbar {display:none}
+            &:after {
+                content: '';
+                display: inline-block;
+                width: .407407rem;
+            }
             li {
                 display:inline-block;
             }
