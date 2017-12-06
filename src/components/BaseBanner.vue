@@ -108,7 +108,7 @@ export default {
                 background-position: center;
                 background-size: cover;
                 border-radius: .092593rem;
-                box-shadow: 0 -150px 90px 0px rgba(0, 0, 0, 0.4) inset;
+                box-shadow: 0 -160px 90px 0px rgba(0, 0, 0, 0.55) inset;
                 color: #fff;
                 .c-lb {
                     position: absolute;
@@ -118,7 +118,7 @@ export default {
                         display: inline;
                     }
                     p {
-                        margin-top: .212963rem;
+                        margin-top: .166667rem;
                         width: 6.518519rem;
                     }
                 }
@@ -146,6 +146,8 @@ export default {
         width: .203704rem;
         height: .092593rem;
         background-color: #ff6a1f;
+        border-radius: .037037rem;
+        opacity: 1;
     }
 }
 .swiper-slide .c-lb {

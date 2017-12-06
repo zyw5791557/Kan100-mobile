@@ -34,14 +34,18 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 1.722222rem;
+            height: 2.092593rem;
+            img {
+                display: block;
+                width: 3.712963rem;
+                height: .425926rem;
+            }
         }
         .cr {
             text-align: center;
             color: #ccc;
             height: 1.62963rem;
             .cr-des {
-                margin-top: .37037rem;
                 margin-bottom: .055556rem;
             }
         }
@@ -49,16 +53,19 @@ export default {
     #footer {
         .cr {
             font-size: 12px;
+            font-size: 10px;
         }
     }
     [data-dpr="2"] #footer {
         .cr {
             font-size: 24px;
+            font-size: 20px;
         }
     }
     [data-dpr="3"] #footer {
         .cr {
             font-size: 36px;
+            font-size: 30px;
         }
     }
 </style>

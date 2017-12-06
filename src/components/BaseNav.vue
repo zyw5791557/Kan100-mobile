@@ -76,15 +76,15 @@ export default {
     .nav {
         padding: 0 .277778rem;
         height: .851852rem;
+        display: flex;
+        justify-content: space-between;
         .content {
             width: 100%;
         }
         ul {
-            width:100%;
-            display: inline;
+            width: 100%;
             white-space: nowrap;
             overflow-x:scroll;
-            float:left;
             overflow-y:hidden;
             &::-webkit-scrollbar {display:none}
             li {
@@ -95,8 +95,8 @@ export default {
                 display: block;
                 color: #1a1a1a;
                 line-height: .851852rem;
-                letter-spacing: 4px;
                 margin-right: .592593rem;
+                margin-right: .518519rem;
                 box-sizing: border-box;
                 font-size: 16px;
                 &.router-link-exact-active {
@@ -118,15 +118,15 @@ export default {
         .moreLinks {
             position: absolute;
             right: .277778rem;
-            width: 1.277778rem;
+            width: .925926rem;
             height: .851852rem;
-            background: -webkit-linear-gradient(left, rgba(255,255,255,0),rgba(255,255,255,1));
+            background: -webkit-linear-gradient(left, rgba(255,255,255,.7),rgba(255,255,255,1));
             .menu-more-icon {
                 display: block;
-                width: 1.277778rem;
+                width: .925926rem;
                 height: .851852rem;
                 background: url('/static/images/moreLinks.png') no-repeat right center;
-                background-size: .333333rem .277778rem;
+                background-size: .333333rem .305556rem;
             }
         }
     }

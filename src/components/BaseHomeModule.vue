@@ -72,6 +72,7 @@ export default {
                 h2 {
                     color: #1a1a1a;
                     font-size: 18px;
+                    font-weight: 600;
                 }
                 a {
                     display: flex;
@@ -120,7 +121,7 @@ export default {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
-                    box-shadow: 0 -60px 70px 0px rgba(0, 0, 0, 0.4) inset;
+                    box-shadow: 0 -70px 70px 0px rgba(0, 0, 0, 0.7) inset;
                     .c-rt {
                         position: absolute;
                         right: 0;
@@ -141,7 +142,7 @@ export default {
                     .c-lb {
                         position: absolute;
                         left: .212963rem;
-                        bottom: .222222rem;
+                        bottom: .166667rem; // 18px
                         z-index: 5;
                         overflow: hidden;
                         .c-date {
@@ -154,10 +155,10 @@ export default {
                 }
             }
             .piclist-title {
-                padding: .101852rem 0 .287037rem 0;
+                padding: .222222rem 0 .462963rem 0;
                 .c-title {
-                    height: .694444rem;
-                    line-height: .694444rem;
+                    height: .407407rem;
+                    line-height: .407407rem;
                     overflow: hidden;
                     text-align: left;
                     width: 100%;
@@ -166,8 +167,9 @@ export default {
                     }
                 }
                 .c-info {
-                    height: .462963rem;
-                    line-height: .462963rem;
+                    margin-top: .12037rem;
+                    height: .342593rem;
+                    line-height: .342593rem;
                     overflow: hidden;
                     text-align: left;
                     a {
@@ -200,13 +202,12 @@ export default {
             }
             .piclist-title {
                 .c-title {
-                    font-size: 16px;
+                    font-size: 14px;
                 }
                 .c-info {
                     font-size: 12px;
                 }
             }
-            
         }
     }
 
@@ -231,7 +232,7 @@ export default {
             }
             .piclist-title {
                 .c-title {
-                    font-size: 32px;
+                    font-size: 28px;
                 }
                 .c-info {
                     font-size: 24px;
@@ -262,7 +263,7 @@ export default {
             }
             .piclist-title {
                 .c-title {
-                    font-size: 48px;
+                    font-size: 42px;
                 }
                 .c-info {
                     font-size: 36px;
