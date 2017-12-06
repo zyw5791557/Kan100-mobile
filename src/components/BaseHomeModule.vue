@@ -50,11 +50,11 @@ export default {
                             </router-link>
                         </div>
                         <div class="piclist-title">
-                            <div class="c-title text-ellipsis">
-                                <router-link :to="item.url">{{ item.title }}</router-link>
+                            <div class="c-title">
+                                <router-link class="text-ellipsis" :to="item.url">{{ item.title }}</router-link>
                             </div>
-                            <div class="c-info text-ellipsis">
-                                <router-link :to="item.url">{{ item.des }}</router-link>
+                            <div class="c-info">
+                                <router-link class="text-ellipsis" :to="item.url">{{ item.des }}</router-link>
                             </div>
                         </div>
                     </li>
@@ -172,6 +172,7 @@ export default {
                     text-align: left;
                     width: 96%;
                     a {
+                        display: block;
                         color: #1a1a1a;
                     }
                 }
@@ -181,8 +182,9 @@ export default {
                     line-height: .342593rem;
                     overflow: hidden;
                     text-align: left;
-                    width: 96%;
+                    width: 94%;
                     a {
+                        display: block;
                         color: #999;
                     }
                 }
