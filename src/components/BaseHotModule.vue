@@ -93,7 +93,10 @@ export default {
                         height: .314815rem;
                         border-radius: 50%;
                         margin-left: .111111rem;
-                        background: url('/static/images/change.png') no-repeat center;
+                        background-image: url('/static/images/change.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
                     }
                 }
             }
@@ -105,8 +108,13 @@ export default {
                 justify-content: space-between;
                 flex-wrap: wrap;
                 li {
-                    width: 4.657407rem;
-
+                    width: 50%;
+                    box-sizing: border-box;
+                    padding-right: .064815rem;
+                    &:nth-of-type(2n) {
+                        padding-right: 0;
+                        padding-left: .064815rem;
+                    }
                 }
             }
             .piclist-img {
@@ -127,7 +135,7 @@ export default {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
-                    box-shadow: 0 -70px 70px 0px rgba(0, 0, 0, 0.7) inset;
+                    box-shadow: 0 -.933333rem .933333rem 0px rgba(0, 0, 0, 0.7) inset;
                     .c-rt {
                         position: absolute;
                         right: 0;
@@ -159,10 +167,10 @@ export default {
                 }
             }
             .piclist-title {
-                padding: .222222rem 0 .462963rem 0;
+                padding: .212963rem 0 .462963rem 0;
                 .c-title {
-                    height: .407407rem;
-                    line-height: .407407rem;
+                    height: .425926rem;
+                    line-height: .425926rem;
                     overflow: hidden;
                     text-align: left;
                     width: 96%;
@@ -172,9 +180,9 @@ export default {
                     }
                 }
                 .c-info {
-                    margin-top: .12037rem;
-                    height: .342593rem;
-                    line-height: .342593rem;
+                    padding-top: .092593rem;
+                    height: .37037rem;
+                    line-height: .37037rem;
                     overflow: hidden;
                     text-align: left;
                     width: 94%;

@@ -41,6 +41,18 @@ export default {
                 }
             ]
         }
+    },
+    methods: {
+        init() {
+            new Swiper('#nav-swiper', {
+                freeMode: true,
+                freeModeMomentumRatio: 0.5,
+                slidesPerView: 'auto'
+            });
+        }
+    },
+    mounted () {
+        this.init();
     }
 }
 </script>
@@ -48,11 +60,11 @@ export default {
 <template>
     <nav class="nav" v-once>
         <div class="content">
-            <ul>
-                <li v-for="(item, index) in navLinks" :key="index">
-                    <router-link :to="{ name: item.routerName }">{{ item.name }}</router-link>
-                </li>
-            </ul>
+            <div class="swiper-container" id="nav-swiper">
+                <div class="swiper-wrapper">
+                    <router-link v-for="(item, index) in navLinks" :key="index" class="swiper-slide" :to="{ name: item.routerName }">{{ item.name }}</router-link>
+                </div>
+            </div>
         </div>
         <a class="moreLinks" href="">
             <i class="menu-more-icon"></i>
@@ -61,6 +73,33 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    .swiper-slide {
+        color: #1a1a1a;
+        line-height: .851852rem;
+        width: auto;
+        margin-right: .518519rem;
+        &:last-child {
+            &:after {
+                content: '';
+                display: inline-block;
+                width: .407407rem;
+            }
+        }
+        &.router-link-exact-active {
+            color: #ff6a1f;
+            &:after {
+                content: '';
+                width: 100%;
+                height: .055556rem;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 20px;
+                background-color: #ff6a1f;
+            }
+        }
+    }
     .nav {
         padding: 0 .277778rem;
         height: .851852rem;
@@ -69,47 +108,9 @@ export default {
         .content {
             width: 100%;
         }
-        ul {
-            width: 100%;
-            white-space: nowrap;
-            overflow-x:scroll;
-            overflow-y:hidden;
-            &::-webkit-scrollbar {display:none}
-            &:after {
-                content: '';
-                display: inline-block;
-                width: .407407rem;
-            }
-            li {
-                display:inline-block;
-            }
-            a {
-                position: relative;
-                display: block;
-                color: #1a1a1a;
-                line-height: .851852rem;
-                margin-right: .592593rem;
-                margin-right: .518519rem;
-                box-sizing: border-box;
-                font-size: 16px;
-                &.router-link-exact-active {
-                    color: #ff6a1f;
-                    &:after {
-                        content: '';
-                        width: 100%;
-                        height: .055556rem;
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        border-radius: 20px;
-                        background-color: #ff6a1f;
-                    }
-                }
-            }
-        }
         .moreLinks {
             position: absolute;
+            z-index: 999;
             right: .277778rem;
             width: .925926rem;
             height: .851852rem;
@@ -123,12 +124,15 @@ export default {
             }
         }
     }
+    .swiper-slide {
+        font-size: 16px;
+    }
 
-    [data-dpr="2"] .nav ul li a {
+    [data-dpr="2"] .nav .swiper-slide {
         font-size: 32px;
     }
 
-    [data-dpr="3"] .nav ul li a {
+    [data-dpr="3"] .nav .swiper-slide {
         font-size: 48px;
     }
 </style>

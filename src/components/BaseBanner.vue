@@ -13,7 +13,7 @@ export default {
     },
     methods: {
         init() {
-            new Swiper ('.swiper-container', {
+            new Swiper ('#banner-swiper', {
                 loop: true,             // 循环
                 roundLengths: true,     // 宽高比例取整
                 initialSlide: 0,        // 初始化索引    
@@ -37,7 +37,7 @@ export default {
 
 <template>
     <section id="base-banner" v-once>
-		<div class="swiper-container">
+		<div class="swiper-container" id="banner-swiper">
 			<div class="swiper-wrapper">
 				<div v-for="(item,index) in loadData" :key="index" class="swiper-slide" title="" >
                     <a :href="item.url" :style="`background-image: url(${item.img})`">
@@ -59,21 +59,26 @@ export default {
         padding: .231481rem 0 .416667rem 0;
     }
     .swiper-container {
-        height: 5.305556rem;
         .swiper-slide {
             width: 95%;
             margin: 0 .074074rem;
             border-radius: .092593rem;
-            a {
+            &:before {
+                content: ' ';
                 display: block;
-                width: 100%;
-                height: 100%;
-                position: relative;
+                padding-top: 56.17647058823529%;
+            }
+            a {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
                 border-radius: .092593rem;
-                box-shadow: 0 -160px 90px 0px rgba(0, 0, 0, 0.55) inset;
+                box-shadow: 0 -2.133333rem 1.2rem 0px rgba(0, 0, 0, 0.55) inset;
                 color: #fff;
                 .c-lb {
                     position: absolute;
