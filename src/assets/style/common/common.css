@@ -1,24 +1,30 @@
+body {
+  color: #1a1a1a;
+}
+
 .text-ellipsis {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 i {
-    font-style: normal;
+  font-style: normal;
 }
- 
+
 .clearfix {
-    zoom: 1;
+  zoom: 1;
 }
 
 .clearfix:after {
-    content: ".";    
-    display: block; 
-    clear: both;    
-    visibility: hidden;      
-    height: 0;     
-    font-size:0;
-} 
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}

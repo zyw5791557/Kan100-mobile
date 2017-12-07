@@ -73,8 +73,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../styles/vars.scss';
     .swiper-slide {
-        color: #1a1a1a;
+        color: $baseColor;
         line-height: .851852rem;
         width: auto;
         margin-right: .518519rem;
@@ -86,7 +87,7 @@ export default {
             }
         }
         &.router-link-exact-active {
-            color: #ff6a1f;
+            color: $orange;
             &:after {
                 content: '';
                 width: 100%;
@@ -96,12 +97,12 @@ export default {
                 right: 0;
                 bottom: 0;
                 border-radius: 20px;
-                background-color: #ff6a1f;
+                background-color: $orange;
             }
         }
     }
     .nav {
-        padding: 0 .277778rem;
+        padding: 0 $gap;
         height: .851852rem;
         display: flex;
         justify-content: space-between;

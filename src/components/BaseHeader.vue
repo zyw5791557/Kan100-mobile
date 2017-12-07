@@ -33,11 +33,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../styles/vars.scss';
     #header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 .277778rem;
+        padding: 0 $gap;
         height: 1.222222rem;
         .logo {
             display: block;

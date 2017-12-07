@@ -55,53 +55,33 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../styles/vars.scss';
+@import '../styles/mixins.scss';
     #base-banner {
-        padding: .231481rem 0 .416667rem 0;
+        padding: $bannerPadding;
     }
     .swiper-container {
         .swiper-slide {
             width: 95%;
-            margin: 0 .074074rem;
-            border-radius: .092593rem;
-            &:before {
-                content: ' ';
-                display: block;
-                padding-top: 56.17647058823529%;
-            }
+            margin: 0 $bannerSlideGap;
+            border-radius: $bannerRadius;
+            @include propor(56.17647058823529%);
+            overflow: hidden;
             a {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: .092593rem;
-                box-shadow: 0 -2.133333rem 1.2rem 0px rgba(0, 0, 0, 0.55) inset;
+                @include piclink($bannerShadow);
                 color: #fff;
-                .c-lb {
-                    position: absolute;
-                    left: .305556rem;
-                    bottom: .305556rem;
-                    h3 {
-                        display: inline;
-                    }
-                    p {
-                        margin-top: .166667rem;
-                        width: 6.518519rem;
-                    }
-                }
+                @include banner-c-lb;
             }
         }
     }
 </style>
 <style lang="scss">
+@import '../styles/vars.scss';
 #base-banner {
     .swiper-pagination {
         text-align: right;
         width: 95%;
-        bottom: .342593rem;
+        bottom: $bannerPaginationBottom;
     }
 }
 
@@ -115,7 +95,7 @@ export default {
     &.swiper-pagination-bullet-active {
         width: .203704rem;
         height: .092593rem;
-        background-color: #ff6a1f;
+        background-color: $orange;
         border-radius: .037037rem;
         opacity: 1;
     }

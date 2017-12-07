@@ -65,235 +65,61 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../styles/vars.scss';
+@import '../styles/mixins.scss';
     #base-hot-module {
         .mainer {
             letter-spacing: 1px;
-            margin: 0 .277778rem;
-            padding-bottom: .092593rem;
-            border-bottom: 1px solid #d9d9d9;
+            margin: 0 $gap;
+            padding-bottom: $moduleBottomPadding;
+            border-bottom: $moduleBorder;
             .header-module {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                height: .675926rem;
-                line-height: .675926rem;
+                @include moduleHeader;
                 h2 {
-                    color: #1a1a1a;
+                    color: $baseColor;
                     font-size: 18px;
                     font-weight: 600;
                 }
                 a {
                     display: flex;
                     align-items: center;
-                    color: #ff6a1f;
+                    color: $orange;
                     font-size: 14px;
                     i {
-                        display: block;
-                        width: .314815rem;
-                        height: .314815rem;
-                        border-radius: 50%;
-                        margin-left: .111111rem;
-                        background-image: url('/static/images/change.png');
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: cover;
+                        @include smallIcon('/static/images/change.png');
                     }
                 }
             }
         }
         .m-pic-list {
-            margin-top: .324074rem;
+            margin-top: $piclistMarginTop;
             ul {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 li {
-                    width: 50%;
-                    box-sizing: border-box;
-                    padding-right: .064815rem;
-                    &:nth-of-type(2n) {
-                        padding-right: 0;
-                        padding-left: .064815rem;
-                    }
+                    @include picItem(2n);
                 }
             }
             .piclist-img {
                 position: relative;
                 overflow: hidden;
-                border-radius: .092593rem;
-                &:before {
-                    content: '';
-                    display: block;
-                    padding-top: 56.46123260437376%;
-                }
+                border-radius: $itemRadius;
+                @include propor(56.46123260437376%);
                 .piclist-link {
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                    box-shadow: 0 -.933333rem .933333rem 0px rgba(0, 0, 0, 0.7) inset;
-                    .c-rt {
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        z-index: 5;
-                        overflow: hidden;
-                        .c-collect {
-                            display: block;
-                            padding: .111111rem;
-                            text-align: center;
-                            background-color: #ff6a1f;
-                            border-radius: 0 .092593rem 0 .092593rem;
-                            color: #fff;
-                        }
-                    }
-                    .c-lb {
-                        position: absolute;
-                        left: .212963rem;
-                        bottom: .166667rem; // 18px
-                        z-index: 5;
-                        overflow: hidden;
-                        .c-date {
-                            color: #fff;
-                        }
-                        .c-date-score {
-                            color: #ff6a1f;
-                        }
-                    }
+                    @include piclink($boxShadow);
+                    @include c-rt($itemRadius);
+                    @include c-lb($orange);
                 }
             }
-            .piclist-title {
-                padding: .212963rem 0 .462963rem 0;
-                .c-title {
-                    height: .425926rem;
-                    line-height: .425926rem;
-                    overflow: hidden;
-                    text-align: left;
-                    width: 96%;
-                    a {
-                        display: block;
-                        color: #1a1a1a;
-                    }
-                }
-                .c-info {
-                    padding-top: .092593rem;
-                    height: .37037rem;
-                    line-height: .37037rem;
-                    overflow: hidden;
-                    text-align: left;
-                    width: 94%;
-                    a {
-                        display: block;
-                        color: #999;
-                    }
-                }
-            }
+            @include picTitle($baseColor);
         }
     }
 
     // 根据 data-dpr 设置字体大小
-    #base-hot-module {
-        .mainer {
-            .header-module {
-                h2 {
-                    font-size: 18px;
-                }
-                a {
-                    font-size: 14px;
-                }
-            }
-            .m-pic-list .piclist-img {
-                .c-collect,
-                .c-date {
-                    font-size: 11px;
-                }
-                .c-date-score {
-                    font-size: 16px;
-                    .score-item-after {
-                        font-size: 12px;
-                    }
-                }
-            }
-            .piclist-title {
-                .c-title {
-                    font-size: 14px;
-                }
-                .c-info {
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-
-    [data-dpr="2"] #base-hot-module {
-        .mainer {
-            .header-module {
-                h2 {
-                    font-size: 36px;
-                }
-                a {
-                    font-size: 28px;
-                }
-            }
-            .m-pic-list .piclist-img {
-                .c-collect,
-                .c-date {
-                    font-size: 22px;
-                }
-                .c-date-score {
-                    font-size: 36px;
-                    .score-item-after {
-                        font-size: 24px;
-                    }
-                }
-            }
-            .piclist-title {
-                .c-title {
-                    font-size: 28px;
-                }
-                .c-info {
-                    font-size: 24px;
-                }
-            }
-            
-        }
-    }
-
-    [data-dpr="3"] #base-hot-module {
-        .mainer {
-            .header-module {
-                h2 {
-                    font-size: 54px;
-                }
-                a {
-                    font-size: 42px;
-                }
-            }
-            .m-pic-list .piclist-img {
-                .c-collect,
-                .c-date {
-                    font-size: 33px;
-                }
-                .c-date-score {
-                    font-size: 48px;
-                    .score-item-after {
-                        font-size: 36px;
-                    }
-                }
-            }
-            .piclist-title {
-                .c-title {
-                    font-size: 42px;
-                }
-                .c-info {
-                    font-size: 36px;
-                }
-            }
-        }
-    }
+    @include moduleFontSize('#base-hot-module');
     
 </style>
