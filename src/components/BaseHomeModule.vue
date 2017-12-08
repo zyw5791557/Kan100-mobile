@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-    <section id="base-home-module" v-once>
+    <section class="base-home-module" v-once>
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
@@ -67,7 +67,7 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/vars.scss';
 @import '../styles/mixins.scss';
-    #base-home-module {
+    .base-home-module {
         padding-top: $moduleTopPadding;
         .mainer {
             letter-spacing: 1px;
@@ -125,6 +125,6 @@ export default {
     }
 
     // 根据 data-dpr 设置字体大小
-    @include moduleFontSize('#base-home-module');
+    @include moduleFontSize('.base-home-module');
     
 </style>

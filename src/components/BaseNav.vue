@@ -44,7 +44,7 @@ export default {
     },
     methods: {
         init() {
-            new Swiper('#nav-swiper', {
+            new Swiper('#nav-swiper--head', {
                 freeMode: true,
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto'
@@ -60,7 +60,7 @@ export default {
 <template>
     <nav class="nav" v-once>
         <div class="content">
-            <div class="swiper-container" id="nav-swiper">
+            <div class="swiper-container" id="nav-swiper--head">
                 <div class="swiper-wrapper">
                     <router-link v-for="(item, index) in navLinks" :key="index" class="swiper-slide" :to="{ name: item.routerName }">{{ item.name }}</router-link>
                 </div>

@@ -23,12 +23,12 @@ export default {
 </script>
 
 <template>
-    <section class="base-hot-module" v-once>
+    <section class="base-new-module" v-once>
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
-                <a href="javascript:;" v-if="loadData.headLinkName">
-                    <span>{{ loadData.headLinkName }}</span>
+                <a href="javascript:;">
+                    <span>更多</span>
                     <i></i>
                 </a>
             </div>
@@ -60,6 +60,11 @@ export default {
                     </li>
                 </ul>
             </div>
+            <div class="m-new-list">
+                <ul>
+                    <li v-for="(item,index) in loadData.newsData" :key="index" class="text-ellipsis">{{ item.msg }}</li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -67,12 +72,11 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/vars.scss';
 @import '../styles/mixins.scss';
-    .base-hot-module {
+    .base-new-module {
+        padding-top: $moduleTopPadding;
         .mainer {
             letter-spacing: 1px;
             margin: 0 $gap;
-            padding-bottom: $moduleBottomPadding;
-            border-bottom: $moduleBorder;
             .header-module {
                 display: flex;
                 justify-content: space-between;
@@ -89,12 +93,14 @@ export default {
                     color: $orange;
                     font-size: 14px;
                     i {
-                        @include smallIcon('/static/images/change.png');
+                        @include smallIcon('/static/images/more.png');
                     }
                 }
             }
         }
         .m-pic-list {
+            padding-bottom: $moduleBottomPadding;
+            border-bottom: $moduleBorder;
             margin-top: $piclistMarginTop;
             ul {
                 display: flex;
@@ -117,9 +123,28 @@ export default {
             }
             @include picTitle($baseColor);
         }
+        .m-new-list {
+            border-bottom: $moduleBorder;
+            li {
+                position: relative;
+                text-indent: .259259rem;
+                height: 1rem;
+                line-height: 1rem;
+                &:before {
+                    content: ' ';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    background-color: $baseColor;
+                    width: .055556rem;
+                    height: .055556rem;
+                    border-radius: 50%;
+                }
+            }
+        }
     }
 
     // 根据 data-dpr 设置字体大小
-    @include moduleFontSize('.base-hot-module');
+    @include moduleFontSize('.base-new-module');
     
 </style>

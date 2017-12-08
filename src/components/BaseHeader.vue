@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-    <header id="header">
+    <header class="header">
         <router-link :to="{ name: 'HomeView' }" class="logo">
 
         </router-link>
@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../styles/vars.scss';
-    #header {
+    .header {
         display: flex;
         align-items: center;
         justify-content: space-between;

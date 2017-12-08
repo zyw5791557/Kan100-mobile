@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <footer id="footer" v-once>
+    <footer class="footer" v-once>
         <div class="logo">
             <img src="/static/images/footer-logo.png" alt="">
         </div>
@@ -27,7 +27,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    #footer {
+    .footer {
         width: 100%;
         background-color: #f5f5f5;
         .logo {
@@ -50,19 +50,19 @@ export default {
             }
         }
     }
-    #footer {
+    .footer {
         .cr {
             font-size: 12px;
             font-size: 10px;
         }
     }
-    [data-dpr="2"] #footer {
+    [data-dpr="2"] .footer {
         .cr {
             font-size: 24px;
             font-size: 20px;
         }
     }
-    [data-dpr="3"] #footer {
+    [data-dpr="3"] .footer {
         .cr {
             font-size: 36px;
             font-size: 30px;

@@ -69,6 +69,27 @@
     }
 }
 
+/* c-lt 左上标志 */
+@mixin c-lt {
+    .c-lt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        overflow: hidden;
+        .c-rank {
+            display: block;
+            width: .537037rem;
+            height: .537037rem;
+            box-sizing: border-box;
+            padding: .092593rem 0 0 .12963rem;
+            background-color: $orange;
+            border-radius: 0 0 100% 0;
+            color: #fff;
+        }
+    }
+}
+
 /* c-lb 左下角标志 */
 @mixin c-lb($color) {
     .c-lb {
@@ -147,10 +168,17 @@
                     font-size: 14px;
                 }
             }
+            .piclist-time {
+                font-size: 12px;
+            }
             .m-pic-list .piclist-img {
                 .c-collect,
                 .c-date {
                     font-size: 11px;
+                }
+                .c-rank {
+                    font-size: 12px;
+                    font-size: 10px;
                 }
                 .c-date-score {
                     font-size: 16px;
@@ -167,6 +195,9 @@
                     font-size: 12px;
                 }
             }
+            .m-new-list {
+                font-size: 14px;
+            }
         }
     }
 
@@ -180,10 +211,17 @@
                     font-size: 28px;
                 }
             }
+            .piclist-time {
+                font-size: 24px;
+            }
             .m-pic-list .piclist-img {
                 .c-collect,
                 .c-date {
                     font-size: 22px;
+                }
+                .c-rank {
+                    font-size: 24px;
+                    font-size: 20px;
                 }
                 .c-date-score {
                     font-size: 36px;
@@ -200,6 +238,9 @@
                     font-size: 24px;
                 }
             }
+            .m-new-list {
+                font-size: 28px;
+            }
             
         }
     }
@@ -214,10 +255,17 @@
                     font-size: 42px;
                 }
             }
+            .piclist-time {
+                font-size: 36px;
+            }
             .m-pic-list .piclist-img {
                 .c-collect,
                 .c-date {
                     font-size: 33px;
+                }
+                .c-rank {
+                    font-size: 36px;
+                    font-size: 30px;
                 }
                 .c-date-score {
                     font-size: 48px;
@@ -233,6 +281,9 @@
                 .c-info {
                     font-size: 36px;
                 }
+            }
+            .m-new-list {
+                font-size: 42px;
             }
         }
     }

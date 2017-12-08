@@ -1,7 +1,10 @@
 <script>
 import BaseBanner from '../components/BaseBanner';
+import BaseNavTypeModule from '../components/BaseNavTypeModule';
 import BaseHotModule from '../components/BaseHotModule';
 import BaseHomeModule from '../components/BaseHomeModule';
+import BaseSwiperModule from '../components/BaseSwiperModule';
+import BaseNewModule from '../components/BaseNewModule';
 /**@data
  * bannerModuleData     轮播数据
  * hotModuleData        热播数据
@@ -13,15 +16,18 @@ import BaseHomeModule from '../components/BaseHomeModule';
 export default {
     components: {
 		BaseBanner,
+        BaseNavTypeModule,
 		BaseHotModule,
-		BaseHomeModule,  
+        BaseHomeModule,
+        BaseSwiperModule,
+        BaseNewModule
     },
     data () {
         return {
             bannerModuleData: [
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
@@ -29,7 +35,7 @@ export default {
                 },
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
@@ -37,7 +43,7 @@ export default {
                 },
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
@@ -45,7 +51,7 @@ export default {
                 },
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
@@ -53,15 +59,38 @@ export default {
                 },
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
                     }
                 }
             ],
+            navTypeModuleData: [
+                {
+                    name: '科幻',
+                    routerName: ''
+                },
+                {
+                    name: '犯罪',
+                    routerName: ''
+                },
+                {
+                    name: '动作',
+                    routerName: ''
+                },
+                {
+                    name: '悬疑',
+                    routerName: ''
+                },
+                {
+                    name: '全部',
+                    routerName: ''
+                }
+            ],
             hotModuleData: {
-                type: '重磅热播',
+                type: '热播推荐',
+                headLinkName: '',
                 piclistData: [
                     {   
                         url: '',
@@ -120,7 +149,7 @@ export default {
                 ]
             },
             movieModuleData: {
-                type: '电影',
+                type: '特色电影好片',
                 piclistData: [
                     {   
                         url: '/home',
@@ -169,8 +198,218 @@ export default {
                     }
                 ]
             },
+            hotSwiperModuleData: {
+                id: '001',
+                type: '热播榜',
+                headLinkName: '查看完整榜单',
+                rank: true,
+                piclistData: [
+                    {
+                        timeline: '',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '1088.9万播放',
+                    },
+                    {
+                        timeline: '',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '8.9',
+                        title: '傲娇与偏见',
+                        des: '1.9亿播放',
+                    },
+                    {
+                        timeline: '',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.0',
+                        title: '表情奇幻冒险',
+                        des: '1756.0万播放',
+                    },
+                    {
+                        timeline: '',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '绣春刀',
+                        des: '1088.9万播放',
+                    },
+                    {
+                        timeline: '',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '略略略',
+                        des: '1088.9万播放',
+                    },
+                    {
+                        timeline: '',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '略略略',
+                        des: '1088.9万播放',
+                    },
+                    {
+                        timeline: '',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '略略略',
+                        des: '1088.9万播放',
+                    },
+                    {
+                        timeline: '',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '略略略',
+                        des: '1088.9万播放',
+                    }
+                ]
+            },
+            timelineSwiperModuleData: {
+                id: '002',
+                type: '即将上线',
+                headLinkName: '',
+                rank: false,
+                piclistData: [
+                    {
+                        timeline: '12月02日',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        catname: '预告',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        timeline: '12月03日',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        catname: '预告',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        timeline: '12月04日',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        catname: '预告',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        timeline: '12月05日',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        catname: '预告',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        timeline: '12月06日',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        catname: '预告',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        timeline: '12月07日',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        catname: '预告',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        timeline: '12月08日',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        catname: '预告',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        timeline: '12月09日',
+                        url: '/home/homeView',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        catname: '预告',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    }
+                ]
+            },
+            newModuleData: {
+                type: '每日电影资讯',
+                piclistData: [
+                    {   
+                        url: '/home/homeView',
+                        img: 'http://m.qiyipic.com/common/lego/20171208/861893f7ef154895af51f8e3f39d2323.jpg',
+                        catname: '',
+                        collect: '01:41',
+                        score: '',
+                        title: '韩庚重寻初心',
+                        des: '越野千里被野为什么用琴鸟都阿萨德阿萨德',
+                    },
+                    {   
+                        url: '/home/homeView',
+                        img: 'http://m.qiyipic.com/common/lego/20171208/861893f7ef154895af51f8e3f39d2323.jpg',
+                        catname: '图文',
+                        collect: '',
+                        score: '',
+                        title: '乘风破浪MV曝光删减镜头',
+                        des: '因为直男癌遭到女性的排斥不阿萨德阿萨德阿萨德',
+                    }
+                ],
+                newsData: [
+                    {
+                        msg: '一条狗的使命什么时候中国上映，定档预告温暖上线定大师傅阿斯蒂芬阿萨德'
+                    },
+                    {
+                        msg: '吴宇森翻拍电影追捕 追捕上映时间主演阵容介绍'
+                    },
+                    {
+                        msg: '了不起的菲丽西电影主题曲叫什么?由谁演唱?'
+                    }
+                ]
+            },
 			teleplayModuleData: {
-                type: '电视剧',
+                type: '网络电影',
                 piclistData: [
                     {   
                         url: '/home',
@@ -220,7 +459,7 @@ export default {
                 ]
             },
 			showModuleData: {
-                type: '综艺',
+                type: '华语电影',
                 piclistData: [
                     {   
                         url: '/home',
@@ -270,7 +509,7 @@ export default {
                 ]
             },
 			animeModuleData: {
-                type: '动漫',
+                type: '欧美电影',
                 piclistData: [
                     {   
                         url: '/home',
@@ -327,8 +566,12 @@ export default {
 <template>
     <div class="container">
         <base-banner :data="bannerModuleData"></base-banner>
+        <base-nav-type-module :data="navTypeModuleData"></base-nav-type-module>
 		<base-hot-module :data="hotModuleData"></base-hot-module>
 		<base-home-module :data="movieModuleData"></base-home-module>
+        <base-swiper-module :data="hotSwiperModuleData"></base-swiper-module>
+        <base-swiper-module :data="timelineSwiperModuleData"></base-swiper-module>
+        <base-new-module :data="newModuleData"></base-new-module>
 		<base-home-module :data="teleplayModuleData"></base-home-module>
 		<base-home-module :data="showModuleData"></base-home-module>
 		<base-home-module :data="animeModuleData"></base-home-module>

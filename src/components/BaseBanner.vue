@@ -13,7 +13,7 @@ export default {
     },
     methods: {
         init() {
-            new Swiper ('#banner-swiper', {
+            new Swiper ('#banner-swiper--home', {
                 loop: true,             // 循环
                 roundLengths: true,     // 宽高比例取整
                 initialSlide: 0,        // 初始化索引    
@@ -36,8 +36,8 @@ export default {
 </script>
 
 <template>
-    <section id="base-banner" v-once>
-		<div class="swiper-container" id="banner-swiper">
+    <section class="base-banner" v-once>
+		<div class="swiper-container" id="banner-swiper--home">
 			<div class="swiper-wrapper">
 				<div v-for="(item,index) in loadData" :key="index" class="swiper-slide" title="" >
                     <a :href="item.url" :style="`background-image: url(${item.img})`">
@@ -57,12 +57,12 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/vars.scss';
 @import '../styles/mixins.scss';
-    #base-banner {
+    .base-banner {
         padding: $bannerPadding;
     }
     .swiper-container {
         .swiper-slide {
-            width: 95%;
+            width: 94.44444444444444%;
             margin: 0 $bannerSlideGap;
             border-radius: $bannerRadius;
             @include propor(56.17647058823529%);
@@ -77,10 +77,10 @@ export default {
 </style>
 <style lang="scss">
 @import '../styles/vars.scss';
-#base-banner {
+.base-banner {
     .swiper-pagination {
         text-align: right;
-        width: 95%;
+        width: 94.44444444444444%;
         bottom: $bannerPaginationBottom;
     }
 }
@@ -91,7 +91,8 @@ export default {
     border-radius: 50%;
     background-color: #ffffff;
     opacity: 0.4;
-    transition: all .3s;
+    transition: all 1s;
+    -webkit-transition: all 1s;
     &.swiper-pagination-bullet-active {
         width: .203704rem;
         height: .092593rem;

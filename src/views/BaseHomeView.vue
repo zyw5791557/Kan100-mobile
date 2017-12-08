@@ -62,6 +62,7 @@ export default {
             ],
             hotModuleData: {
                 type: '重磅热播',
+                headLinkName: '换一换',
                 piclistData: [
                     {   
                         url: '',
