@@ -26,7 +26,7 @@ export default {
 @import '../styles/vars.scss';
 .base-nav--type {
     padding: 0 $gap;
-    margin-bottom: .416667rem;
+    // margin-bottom: .416667rem;
     .nav-list {
         display: flex;
         justify-content: space-between;

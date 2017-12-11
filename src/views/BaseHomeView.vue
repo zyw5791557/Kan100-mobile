@@ -63,6 +63,7 @@ export default {
             hotModuleData: {
                 type: '重磅热播',
                 headLinkName: '换一换',
+                headLinkIcon: 'change',
                 piclistData: [
                     {   
                         url: '',
@@ -122,6 +123,8 @@ export default {
             },
             movieModuleData: {
                 type: '电影',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
                 piclistData: [
                     {   
                         url: '/home',
@@ -172,6 +175,8 @@ export default {
             },
 			teleplayModuleData: {
                 type: '电视剧',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
                 piclistData: [
                     {   
                         url: '/home',
@@ -222,6 +227,8 @@ export default {
             },
 			showModuleData: {
                 type: '综艺',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
                 piclistData: [
                     {   
                         url: '/home',
@@ -272,6 +279,8 @@ export default {
             },
 			animeModuleData: {
                 type: '动漫',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
                 piclistData: [
                     {   
                         url: '/home',

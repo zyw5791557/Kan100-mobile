@@ -62,7 +62,9 @@ export default {
             </div>
             <div class="m-new-list">
                 <ul>
-                    <li v-for="(item,index) in loadData.newsData" :key="index" class="text-ellipsis">{{ item.msg }}</li>
+                    <li v-for="(item,index) in loadData.newsData" :key="index">
+                        <router-link :to="item.url" class="text-ellipsis">{{ item.msg }}</router-link>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -130,6 +132,10 @@ export default {
                 text-indent: .259259rem;
                 height: 1rem;
                 line-height: 1rem;
+                a {
+                    display: block;
+                    color: $baseColor;
+                }
                 &:before {
                     content: ' ';
                     position: absolute;

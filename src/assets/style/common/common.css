@@ -28,3 +28,8 @@ i {
   height: 0;
   font-size: 0;
 }
+
+.base-swiper-timeline,
+.base-person-swiper {
+  overflow: hidden;
+}

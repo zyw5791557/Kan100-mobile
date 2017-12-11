@@ -23,13 +23,13 @@ export default {
 </script>
 
 <template>
-    <section class="base-hot-module" v-once>
+    <section class="base-hot-module" :class="{ news: loadData.newsModule }" v-once>
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
                 <a href="javascript:;" v-if="loadData.headLinkName">
                     <span>{{ loadData.headLinkName }}</span>
-                    <i></i>
+                    <i :class="loadData.headLinkIcon"></i>
                 </a>
             </div>
             <div class="m-pic-list">
@@ -60,6 +60,15 @@ export default {
                     </li>
                 </ul>
             </div>
+
+            <div class="m-new-list" v-if="loadData.newsData">
+                <ul>
+                    <li v-for="(item,index) in loadData.newsData" :key="index">
+                        <router-link :to="item.url" class="text-ellipsis">{{ item.msg }}</router-link>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </section>
 </template>
@@ -68,6 +77,17 @@ export default {
 @import '../styles/vars.scss';
 @import '../styles/mixins.scss';
     .base-hot-module {
+        &.news {
+            padding-top: $moduleTopPadding;
+            .mainer {
+                border-bottom: none;
+                 padding-bottom: 0;
+                .m-pic-list {
+                    border-bottom: $moduleBorder;
+                    padding-bottom: $moduleBottomPadding;
+                }
+            }
+        }
         .mainer {
             letter-spacing: 1px;
             margin: 0 $gap;
@@ -88,8 +108,11 @@ export default {
                     align-items: center;
                     color: $orange;
                     font-size: 14px;
-                    i {
+                    i.change {
                         @include smallIcon('/static/images/change.png');
+                    }
+                    i.more {
+                        @include smallIcon('/static/images/more.png');
                     }
                 }
             }
@@ -117,6 +140,32 @@ export default {
             }
             @include picTitle($baseColor);
         }
+
+        
+        .m-new-list {
+            border-bottom: $moduleBorder;
+            li {
+                position: relative;
+                text-indent: .259259rem;
+                height: 1rem;
+                line-height: 1rem;
+                a {
+                    display: block;
+                    color: $baseColor;
+                }
+                &:before {
+                    content: ' ';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    background-color: $baseColor;
+                    width: .055556rem;
+                    height: .055556rem;
+                    border-radius: 50%;
+                }
+            }
+        }
+
     }
 
     // 根据 data-dpr 设置字体大小

@@ -27,9 +27,9 @@ export default {
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
-                <a href="javascript:;">
-                    <span>更多</span>
-                    <i></i>
+                <a href="javascript:;" v-if="loadData.headLinkName">
+                    <span>{{ loadData.headLinkName }}</span>
+                    <i :class="loadData.headLinkIcon"></i>
                 </a>
             </div>
             <div class="m-pic-list">
@@ -89,7 +89,10 @@ export default {
                     align-items: center;
                     color: $orange;
                     font-size: 14px;
-                    i {
+                    i.change {
+                        @include smallIcon('/static/images/change.png');
+                    }
+                    i.more {
                         @include smallIcon('/static/images/more.png');
                     }
                 }

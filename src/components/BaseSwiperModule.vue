@@ -8,7 +8,8 @@ export default {
     },
     data () {
         return {
-            loadData: this.data
+            loadData: this.data,
+            weekData: ['一','二','三','四','五','六','七']
         }
     },
     filters: {
@@ -43,6 +44,9 @@ export default {
                     <span>{{ loadData.headLinkName }}</span>
                     <i></i>
                 </a>
+            </div>
+            <div v-if="loadData.selectBtn" class="m-tabs-week">
+                <a v-for="(itm,idx) in weekData" :key="idx" class="m-tabs-item" href="javascript:void(0);">{{ itm }}</a>
             </div>
             <div class="swiper-container" :id="`base-swiper--module${loadData.id}`">
                 <ul class="swiper-wrapper m-pic-list">
@@ -111,6 +115,13 @@ export default {
                 }
             }
         }
+    }
+}
+.m-tabs-week {
+    display: flex;
+    justify-content: space-between;
+    .m-tabs-item {
+        color: $baseColor;
     }
 }
 .swiper-container {

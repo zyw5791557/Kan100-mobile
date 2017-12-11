@@ -4,14 +4,15 @@ import BaseNavTypeModule from '../components/BaseNavTypeModule';
 import BaseHotModule from '../components/BaseHotModule';
 import BaseHomeModule from '../components/BaseHomeModule';
 import BaseSwiperModule from '../components/BaseSwiperModule';
-import BaseNewModule from '../components/BaseNewModule';
 /**@data
- * bannerModuleData     轮播数据
- * hotModuleData        热播数据
- * movieModuleData      电影模块数据
- * teleplayModuleData   电视剧数据
- * showModuleData       综艺数据
- * animeModuleData      动漫数据
+ * bannerModuleData         轮播数据
+ * navTypeModule            电影细分类型导航
+ * hotModuleData            热播推荐数据
+ * featureMovieModuleData   特色电影模块数据
+ * onlineModuleData         网络电影
+ * chineseModuleData        华语电影
+ * eaModuleData             欧美电影
+ * jkModuleData             日韩电影
  */
 export default {
     components: {
@@ -19,8 +20,7 @@ export default {
         BaseNavTypeModule,
 		BaseHotModule,
         BaseHomeModule,
-        BaseSwiperModule,
-        BaseNewModule
+        BaseSwiperModule
     },
     data () {
         return {
@@ -91,6 +91,7 @@ export default {
             hotModuleData: {
                 type: '热播推荐',
                 headLinkName: '',
+                newsModule: true,
                 piclistData: [
                     {   
                         url: '',
@@ -148,8 +149,10 @@ export default {
                     }
                 ]
             },
-            movieModuleData: {
+            featureMovieModuleData: {
                 type: '特色电影好片',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
                 piclistData: [
                     {   
                         url: '/home',
@@ -207,7 +210,7 @@ export default {
                     {
                         timeline: '',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
                         score: '9.2',
@@ -217,7 +220,7 @@ export default {
                     {
                         timeline: '',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
                         score: '8.9',
@@ -227,7 +230,7 @@ export default {
                     {
                         timeline: '',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
                         score: '9.0',
@@ -237,7 +240,7 @@ export default {
                     {
                         timeline: '',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
                         score: '9.2',
@@ -247,7 +250,7 @@ export default {
                     {
                         timeline: '',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
                         score: '9.2',
@@ -257,7 +260,7 @@ export default {
                     {
                         timeline: '',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
                         score: '9.2',
@@ -267,7 +270,7 @@ export default {
                     {
                         timeline: '',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
                         score: '9.2',
@@ -277,7 +280,7 @@ export default {
                     {
                         timeline: '',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/a93ef9eaad544826a8d34d05836d3838.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
                         score: '9.2',
@@ -295,7 +298,7 @@ export default {
                     {
                         timeline: '12月02日',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
                         score: '9.2',
@@ -305,7 +308,7 @@ export default {
                     {
                         timeline: '12月03日',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
                         score: '9.2',
@@ -315,7 +318,7 @@ export default {
                     {
                         timeline: '12月04日',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
                         score: '9.2',
@@ -325,7 +328,7 @@ export default {
                     {
                         timeline: '12月05日',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
                         score: '9.2',
@@ -335,7 +338,7 @@ export default {
                     {
                         timeline: '12月06日',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
                         score: '9.2',
@@ -345,7 +348,7 @@ export default {
                     {
                         timeline: '12月07日',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
                         score: '9.2',
@@ -355,7 +358,7 @@ export default {
                     {
                         timeline: '12月08日',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
                         score: '9.2',
@@ -365,7 +368,7 @@ export default {
                     {
                         timeline: '12月09日',
                         url: '/home/homeView',
-                        img: 'http://pic3.qiyipic.com/common/lego/20171109/2a6b907f65314ff7b838b42f8b0a6c86.jpg',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
                         score: '9.2',
@@ -376,6 +379,9 @@ export default {
             },
             newModuleData: {
                 type: '每日电影资讯',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                newsModule: true,
                 piclistData: [
                     {   
                         url: '/home/homeView',
@@ -398,18 +404,24 @@ export default {
                 ],
                 newsData: [
                     {
+                        url: '',
                         msg: '一条狗的使命什么时候中国上映，定档预告温暖上线定大师傅阿斯蒂芬阿萨德'
                     },
                     {
+                        url: '',
                         msg: '吴宇森翻拍电影追捕 追捕上映时间主演阵容介绍'
                     },
                     {
+                        url: '',
                         msg: '了不起的菲丽西电影主题曲叫什么?由谁演唱?'
                     }
                 ]
             },
-			teleplayModuleData: {
+			onlineModuleData: {
                 type: '网络电影',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                newsModule: true,
                 piclistData: [
                     {   
                         url: '/home',
@@ -446,30 +458,15 @@ export default {
                         score: '7.9',
                         title: '悟空传',
                         des: '彭于晏变身大圣勇斗天庭'
-                    }, 
-                    {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.3',
-                        title: '夜宴',
-                        des: '章子怡上演宫廷版权力的游戏'
                     }
                 ]
             },
-			showModuleData: {
+			chineseModuleData: {
                 type: '华语电影',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                newsModule: true,
                 piclistData: [
-                    {   
-                        url: '/home',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.7',
-                        title: '长城·免费首播',
-                        des: '中外巨星汇聚长城打怪兽',
-                    },
                     {
                         url: '',
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
@@ -508,18 +505,56 @@ export default {
                     }
                 ]
             },
-			animeModuleData: {
+			eaModuleData: {
                 type: '欧美电影',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                newsModule: true,
                 piclistData: [
-                    {   
-                        url: '/home',
+                    {
+                        url: '',
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
-                        score: '9.7',
-                        title: '长城·免费首播',
-                        des: '中外巨星汇聚长城打怪兽',
+                        score: '8.2',
+                        title: '星际特工：千里之城之',
+                        des: '蕾哈娜上演变装热舞秀'
                     },
+                    {
+                        url: '',
+                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '8.9',
+                        title: '空天猎',
+                        des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
+                    },
+                    {
+                        url: '',
+                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '7.9',
+                        title: '悟空传',
+                        des: '彭于晏变身大圣勇斗天庭'
+                    }, 
+                    {
+                        url: '',
+                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.3',
+                        title: '夜宴',
+                        des: '章子怡上演宫廷版权力的游戏'
+                    }
+                ]
+            },
+			jkModuleData: {
+                type: '日韩电影',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                newsModule: true,
+                piclistData: [
                     {
                         url: '',
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
@@ -568,13 +603,14 @@ export default {
         <base-banner :data="bannerModuleData"></base-banner>
         <base-nav-type-module :data="navTypeModuleData"></base-nav-type-module>
 		<base-hot-module :data="hotModuleData"></base-hot-module>
-		<base-home-module :data="movieModuleData"></base-home-module>
+		<base-home-module :data="featureMovieModuleData"></base-home-module>
         <base-swiper-module :data="hotSwiperModuleData"></base-swiper-module>
         <base-swiper-module :data="timelineSwiperModuleData"></base-swiper-module>
-        <base-new-module :data="newModuleData"></base-new-module>
-		<base-home-module :data="teleplayModuleData"></base-home-module>
-		<base-home-module :data="showModuleData"></base-home-module>
-		<base-home-module :data="animeModuleData"></base-home-module>
+        <base-hot-module :data="newModuleData"></base-hot-module>
+		<base-hot-module :data="onlineModuleData"></base-hot-module>
+		<base-hot-module :data="chineseModuleData"></base-hot-module>
+		<base-hot-module :data="eaModuleData"></base-hot-module>
+		<base-hot-module :data="jkModuleData"></base-hot-module>
     </div>
 </template>
 
