@@ -5,16 +5,16 @@ import BasePersonSwiperModule from '../components/BasePersonSwiperModule';
 import BaseHomeModule from '../components/BaseHomeModule';
 import BaseSwiperModule from '../components/BaseSwiperModule';
 /**@data
- * bannerModuleData         轮播数据
- * navTypeModuleData        综艺细分类型导航   
- * personData               近期大势综艺咖
+ * bannerModuleData         轮播数据 
+ * personData               动漫人物导航
  * hotModuleData            强档推荐
  * latestModuleData         最新更新
- * gossipModuleData         明星八卦
- * inlandModuleData         内地综艺
- * HKTWModuleData           港台综艺
- * JKModuleData             日韩综艺
- * OAModuleData             欧美综艺
+ * timelineSwiperModuleData 今日放送(To.追番表)
+ * animeMovieModuleData     动画电影
+ * JanimeModuleData         日漫番剧
+ * CanimeModuleData         国产动漫
+ * childAnimeModuleData     少儿动漫
+ * OAAnimeModuleData             欧美动漫
  */
 export default {
     components: {
@@ -240,7 +240,8 @@ export default {
             timelineSwiperModuleData: {
                 id: '001',
                 type: '每日放送',
-                headLinkName: '',
+                headLinkName: '查看追番表',
+                headLinkIcon: 'more',
                 rank: false,
                 selectBtn: true,
                 piclistData: [
@@ -318,8 +319,43 @@ export default {
                     }
                 ]
             },
-			gossipModuleData: {
-                type: '明星八卦',
+			animeMovieModuleData: {
+                type: '动画电影',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                newsModule: true,
+                piclistData: [
+                    {   
+                        url: '/home',
+                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.7',
+                        title: '长城·免费首播',
+                        des: '中外巨星汇聚长城打怪兽',
+                    },
+                    {
+                        url: '',
+                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '8.2',
+                        title: '星际特工：千里之城之',
+                        des: '蕾哈娜上演变装热舞秀'
+                    },
+                    {
+                        url: '',
+                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '8.9',
+                        title: '空天猎',
+                        des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
+                    }
+                ]
+            },
+			JanimeModuleData: {
+                type: '日漫番剧',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,
@@ -362,8 +398,8 @@ export default {
                     }
                 ]
             },
-			inlandModuleData: {
-                type: '内地综艺',
+			CanimeModuleData: {
+                type: '国产动漫',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,
@@ -406,8 +442,8 @@ export default {
                     }
                 ]
             },
-			HKTWModuleData: {
-                type: '港台综艺',
+			childAnimeModuleData: {
+                type: '少儿动漫',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,
@@ -450,52 +486,8 @@ export default {
                     }
                 ]
             },
-			JKModuleData: {
-                type: '日韩综艺',
-                headLinkName: '更多',
-                headLinkIcon: 'more',
-                newsModule: true,
-                piclistData: [
-                    {   
-                        url: '/home',
-                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.7',
-                        title: '长城·免费首播',
-                        des: '中外巨星汇聚长城打怪兽',
-                    },
-                    {
-                        url: '',
-                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.2',
-                        title: '星际特工：千里之城之',
-                        des: '蕾哈娜上演变装热舞秀'
-                    },
-                    {
-                        url: '',
-                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.9',
-                        title: '空天猎',
-                        des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
-                    },
-                    {
-                        url: '',
-                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '7.9',
-                        title: '悟空传',
-                        des: '彭于晏变身大圣勇斗天庭'
-                    }
-                ]
-            },
-			OAModuleData: {
-                type: '欧美',
+			OAAnimeModuleData: {
+                type: '欧美动漫',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,
@@ -550,11 +542,11 @@ export default {
 		<base-home-module :data="hotModuleData"></base-home-module>
 		<base-hot-module :data="latestModuleData"></base-hot-module>
         <base-swiper-module :data="timelineSwiperModuleData"></base-swiper-module>
-        <base-hot-module :data="gossipModuleData"></base-hot-module>
-        <base-hot-module :data="inlandModuleData"></base-hot-module>
-        <base-hot-module :data="HKTWModuleData"></base-hot-module>
-        <base-hot-module :data="JKModuleData"></base-hot-module>
-        <base-hot-module :data="OAModuleData"></base-hot-module>
+        <base-home-module :data="animeMovieModuleData"></base-home-module>
+        <base-hot-module :data="JanimeModuleData"></base-hot-module>
+        <base-hot-module :data="CanimeModuleData"></base-hot-module>
+        <base-hot-module :data="childAnimeModuleData"></base-hot-module>
+        <base-hot-module :data="OAAnimeModuleData"></base-hot-module>
     </div>
 </template>
 

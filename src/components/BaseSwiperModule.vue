@@ -8,9 +8,13 @@ export default {
     },
     data () {
         return {
-            loadData: this.data,
-            weekData: ['一','二','三','四','五','六','七']
+            weekData: [['Monday','一'],['Tuesday','二'],['Wednesday','三'],['Thursday','四'],['Friday','五'],['Saturday','六'],['Sunday','七']]
         }
+    },
+    computed: {
+      loadData() {
+          return this.data;
+      }  
     },
     filters: {
         scoreBeforeFilter (val) {
@@ -27,6 +31,12 @@ export default {
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto'
             });
+        },
+        selectTabs(param,e) {
+            var activeEle = document.querySelector('.m-tabs-item.active');
+            if(activeEle) activeEle.classList.remove('active');
+            var e = window.event || e;
+            e.target.classList.add('active');
         }
     },
     mounted () {
@@ -46,7 +56,7 @@ export default {
                 </a>
             </div>
             <div v-if="loadData.selectBtn" class="m-tabs-week">
-                <a v-for="(itm,idx) in weekData" :key="idx" class="m-tabs-item" href="javascript:void(0);">{{ itm }}</a>
+                <a v-for="(itm,idx) in weekData" :key="idx" @click.stop="selectTabs(itm[0],$event)" class="m-tabs-item" href="javascript:void(0);">{{ itm[1] }}</a>
             </div>
             <div class="swiper-container" :id="`base-swiper--module${loadData.id}`">
                 <ul class="swiper-wrapper m-pic-list">
@@ -63,6 +73,7 @@ export default {
                                     <i class="c-rank" v-if="index < 3 && loadData.rank">{{ index + 1 }}</i>
                                 </div>
                                 <div class="c-lb">
+                                    <span class="c-date" v-if="item.collect">{{ item.collect }}</span>
                                     <span class="c-date c-date-score">
                                         <i class="score-item-before" v-if="item.score">{{ item.score | scoreBeforeFilter }}</i
                                         ><i class="score-item-after" v-if="item.score">{{ item.score | scoreAfterFilter }}</i>
@@ -119,9 +130,19 @@ export default {
 }
 .m-tabs-week {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: .351852rem;
     .m-tabs-item {
         color: $baseColor;
+        width: .648148rem;
+        height: .648148rem;
+        border-radius: 50%;
+        line-height: .648148rem;
+        text-align: center;
+        &.active {
+            background-color: $orange;
+            color: #fff;
+        }
     }
 }
 .swiper-container {

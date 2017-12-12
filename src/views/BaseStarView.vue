@@ -1,27 +1,31 @@
 <script>
 import BaseBanner from '../components/BaseBanner';
+import BaseNavTypeModule from '../components/BaseNavTypeModule';
 import BaseHotModule from '../components/BaseHotModule';
-import BaseHomeModule from '../components/BaseHomeModule';
+import BasePersonModule from '../components/BasePersonModule';
 /**@data
- * bannerModuleData     轮播数据
- * hotModuleData        热播数据
- * movieModuleData      电影模块数据
- * teleplayModuleData   电视剧数据
- * showModuleData       综艺数据
- * animeModuleData      动漫数据
+ * bannerModuleData         轮播数据
+ * navTypeModuleData        明星细分类型导航   
+ * personData               热门明星
+ * dailyModuleData          每日明星咨询
+ * inlandModuleData         内地
+ * HKTWModuleData           港台
+ * JKModuleData             日韩
+ * OAModuleData             欧美
  */
 export default {
     components: {
-		BaseBanner,
-		BaseHotModule,
-		BaseHomeModule,  
+        BaseBanner,
+        BaseNavTypeModule,
+        BaseHotModule,
+        BasePersonModule
     },
     data () {
         return {
             bannerModuleData: [
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171212/f140598db26b415e8bcd9c33ad8b24c0.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
@@ -29,7 +33,7 @@ export default {
                 },
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171212/f140598db26b415e8bcd9c33ad8b24c0.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
@@ -37,7 +41,7 @@ export default {
                 },
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171212/f140598db26b415e8bcd9c33ad8b24c0.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
@@ -45,7 +49,7 @@ export default {
                 },
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171212/f140598db26b415e8bcd9c33ad8b24c0.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
@@ -53,269 +57,325 @@ export default {
                 },
                 {
                     url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171204/0875dc9d287e4d8fab61f84470d5d674.jpg',
+                    img: 'http://m.qiyipic.com/common/lego/20171212/f140598db26b415e8bcd9c33ad8b24c0.jpg',
                     content: {
                         title: '独步天下',
                         dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
                     }
                 }
             ],
-            hotModuleData: {
-                type: '重磅热播',
+            navTypeModuleData: [
+                {
+                    name: '大陆',
+                    routerName: ''
+                },
+                {
+                    name: '台湾',
+                    routerName: ''
+                },
+                {
+                    name: '欧美',
+                    routerName: ''
+                },
+                {
+                    name: '韩国',
+                    routerName: ''
+                },
+                {
+                    name: '全部',
+                    routerName: ''
+                }
+            ],
+            personData: {
+                type: '热门明星',
+                personlistData: [
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    }
+                ]
+            },
+            dailyModuleData: {
+                type: '每日明星资讯',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                newsModule: true,
                 piclistData: [
                     {   
                         url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '电视剧',
-                        collect: '更新至40集',
+                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
+                        catname: '1080P',
+                        collect: '更新至21集',
                         score: '',
                         title: '猎场',
-                        des: '郑秋冬拆骗局攻陈修风'
+                        des: '看丘吉尔霸气强怼国王'
                     },
                     {
                         url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
+                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '更新至22集',
                         score: '',
                         title: '九州海上牧云记',
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
+                    }
+                ],
+                newsData: [
+                    {
+                        url: '',
+                        msg: '一条狗的使命什么时候中国上映，定档预告温暖上线定大师傅阿斯蒂芬阿萨德'
                     },
                     {
                         url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '11-28期',
-                        score: '',
-                        title: '演员的诞生被被被被猩猩嫌弃',
-                        des: '章子怡：只有她会这样对我'
+                        msg: '吴宇森翻拍电影追捕 追捕上映时间主演阵容介绍'
                     },
                     {
                         url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '新片',
-                        collect: '',
-                        score: '9.1',
-                        title: '追捕',
-                        des: '吴宇森展教科书式暴力美学'
-                    },
-                    {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '更新至40集',
-                        score: '',
-                        title: '我的！体育老师',
-                        des: '小米心忧马克患老年痴呆老年痴呆'
-                    }, 
-                    {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '专题',
-                        collect: '',
-                        score: '',
-                        title: 'NBA十佳妖星绝杀勇士啊啊啊啊',
-                        des: '看哭！40岁卡特扣出青春'
+                        msg: '了不起的菲丽西电影主题曲叫什么?由谁演唱?'
                     }
                 ]
             },
-            movieModuleData: {
-                type: '电影',
-                piclistData: [
-                    {   
-                        url: '/home',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.7',
-                        title: '长城·免费首播',
-                        des: '中外巨星汇聚长城打怪兽',
+            inlandModuleData: {
+                type: '内地',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                personlistData: [
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.2',
-                        title: '星际特工：千里之城之',
-                        des: '蕾哈娜上演变装热舞秀'
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.9',
-                        title: '空天猎',
-                        des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '7.9',
-                        title: '悟空传',
-                        des: '彭于晏变身大圣勇斗天庭'
-                    }, 
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.3',
-                        title: '夜宴',
-                        des: '章子怡上演宫廷版权力的游戏'
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     }
                 ]
             },
-			teleplayModuleData: {
-                type: '电视剧',
-                piclistData: [
-                    {   
-                        url: '/home',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.7',
-                        title: '长城·免费首播',
-                        des: '中外巨星汇聚长城打怪兽',
+            HKTWModuleData: {
+                type: '港台',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                personlistData: [
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.2',
-                        title: '星际特工：千里之城之',
-                        des: '蕾哈娜上演变装热舞秀'
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.9',
-                        title: '空天猎',
-                        des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '7.9',
-                        title: '悟空传',
-                        des: '彭于晏变身大圣勇斗天庭'
-                    }, 
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.3',
-                        title: '夜宴',
-                        des: '章子怡上演宫廷版权力的游戏'
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     }
                 ]
             },
-			showModuleData: {
-                type: '综艺',
-                piclistData: [
-                    {   
-                        url: '/home',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.7',
-                        title: '长城·免费首播',
-                        des: '中外巨星汇聚长城打怪兽',
+            JKModuleData: {
+                type: '日韩',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                personlistData: [
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.2',
-                        title: '星际特工：千里之城之',
-                        des: '蕾哈娜上演变装热舞秀'
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.9',
-                        title: '空天猎',
-                        des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '7.9',
-                        title: '悟空传',
-                        des: '彭于晏变身大圣勇斗天庭'
-                    }, 
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.3',
-                        title: '夜宴',
-                        des: '章子怡上演宫廷版权力的游戏'
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     }
                 ]
             },
-			animeModuleData: {
-                type: '动漫',
-                piclistData: [
-                    {   
-                        url: '/home',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.7',
-                        title: '长城·免费首播',
-                        des: '中外巨星汇聚长城打怪兽',
+            OAModuleData: {
+                type: '欧美',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                personlistData: [
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.2',
-                        title: '星际特工：千里之城之',
-                        des: '蕾哈娜上演变装热舞秀'
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.9',
-                        title: '空天猎',
-                        des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '7.9',
-                        title: '悟空传',
-                        des: '彭于晏变身大圣勇斗天庭'
-                    }, 
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.3',
-                        title: '夜宴',
-                        des: '章子怡上演宫廷版权力的游戏'
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
+                    },
+                    {
+                        url: '/',
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '胡歌'
                     }
                 ]
             }
@@ -327,11 +387,13 @@ export default {
 <template>
     <div class="container">
         <base-banner :data="bannerModuleData"></base-banner>
-		<base-hot-module :data="hotModuleData"></base-hot-module>
-		<base-home-module :data="movieModuleData"></base-home-module>
-		<base-home-module :data="teleplayModuleData"></base-home-module>
-		<base-home-module :data="showModuleData"></base-home-module>
-		<base-home-module :data="animeModuleData"></base-home-module>
+        <base-nav-type-module :data="navTypeModuleData"></base-nav-type-module>
+        <base-person-module :data="personData"></base-person-module>
+		<base-hot-module :data="dailyModuleData"></base-hot-module>
+        <base-person-module :data="inlandModuleData"></base-person-module>
+        <base-person-module :data="HKTWModuleData"></base-person-module>
+        <base-person-module :data="JKModuleData"></base-person-module>
+        <base-person-module :data="OAModuleData"></base-person-module>
     </div>
 </template>
 

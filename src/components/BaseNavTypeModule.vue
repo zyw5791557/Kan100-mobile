@@ -34,7 +34,10 @@ export default {
         border-bottom: $moduleBorder;
     }
     a {
-        padding: .231481rem .509259rem;
+        width: 1.638889rem;
+        height: .777778rem;
+        line-height: .777778rem;
+        text-align: center;
         background-color: #f5f5f5;
         border-radius: .342593rem;
         color: $baseColor;

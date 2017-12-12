@@ -92,6 +92,7 @@ export default {
             ],
             personData: {
                 type: '近期TA们在霸屏',
+                fire: true,
                 personlistData: [
                     {
                         url: '/',
@@ -434,7 +435,7 @@ export default {
                 ]
             },
 			OAModuleData: {
-                type: '欧美',
+                type: '欧美综艺',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,

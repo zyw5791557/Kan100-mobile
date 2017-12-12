@@ -10,18 +10,6 @@ export default {
         return {
             loadData: this.data
         }
-    },
-    methods: {
-        init () {
-            new Swiper('#base-person-swiper'+this.loadData.id, {
-                freeMode: true,
-                freeModeMomentumRatio: 0.5,
-                slidesPerView: 'auto'
-            });
-        }
-    },
-    mounted () {
-        this.init();
     }
 }
 </script>
@@ -31,11 +19,15 @@ export default {
         <div class="mainer">
             <div class="header-module" v-if="loadData.type">
                 <h2>{{ loadData.type }}</h2>
+                <a href="javascript:;" v-if="loadData.headLinkName">
+                    <span>{{ loadData.headLinkName }}</span>
+                    <i :class="loadData.headLinkIcon"></i>
+                </a>
             </div>
-            <div :id="`base-person-swiper${loadData.id}`" class="swiper-container">
-                <ul class="swiper-wrapper">
-                    <li v-for="(item,index) in loadData.personlistData" class="swiper-slide">
-                        <router-link :to="item.url" :class="{ fire: index < 3 && loadData.fire }">
+            <div class="person-container">
+                <ul class="person-wrapper">
+                    <li v-for="(item,index) in loadData.personlistData" class="person-item">
+                        <router-link :to="item.url">
                             <img :src="item.img" alt="" width="100%">
                             <div class="c-title">{{ item.name }}</div>
                         </router-link>
@@ -57,7 +49,7 @@ export default {
     .mainer {
         letter-spacing: 1px;
         margin: 0 $gap;
-        padding-bottom: $moduleBottomPadding;
+        padding-bottom: .555556rem;
         border-bottom: $moduleBorder;
         .header-module {
             display: flex;
@@ -69,16 +61,35 @@ export default {
                 font-size: 18px;
                 font-weight: 600;
             }
+            a {
+                display: flex;
+                align-items: center;
+                color: $orange;
+                font-size: 14px;
+                i.change {
+                    @include smallIcon('/static/images/change.png');
+                }
+                i.more {
+                    @include smallIcon('/static/images/more.png');
+                }
+            }
         }
     }
 }
-.swiper-container {
-    padding: .324074rem 0 .518519rem 0;
-    overflow: inherit;
+.person-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 .222222rem;
 }
-.swiper-slide {
-    width: 16.952380952380952%!important;
-    margin-right: .62963rem;
+.person-item {
+    flex-shrink: 0;
+    width: 1.648148rem;
+    padding-top: .462963rem;
+    padding-right: .796296rem;
+    &:nth-child(4n) {
+        padding-right: 0;
+    }
     a {
         display: block;
         color: $baseColor;
@@ -89,19 +100,6 @@ export default {
         }
         .c-title {
             margin-top: .277778rem;
-        }
-        &.fire:after {
-            content: ' ';
-            display: block;
-            width: .333333rem;
-            height: .425926rem;
-            position: absolute;
-            right: .092593rem;
-            top: 0;
-            background-image: url('/static/images/fire.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
         }
     }
 }
