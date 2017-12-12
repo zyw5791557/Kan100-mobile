@@ -155,6 +155,7 @@ export default {
             },
             personData: {
                 type: '近期TA们在霸屏',
+                fire: true,
                 personlistData: [
                     {
                         url: '/',

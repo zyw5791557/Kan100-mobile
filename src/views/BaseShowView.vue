@@ -91,7 +91,7 @@ export default {
                 }
             ],
             personData: {
-                type: '近期TA们在霸屏',
+                type: '近期大势综艺咖',
                 fire: true,
                 personlistData: [
                     {
