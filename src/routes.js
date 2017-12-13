@@ -1,3 +1,4 @@
+// 基本页面
 const Home = resolve => require(['./views/Home.vue'],resolve);
 const HomeView = resolve => require(['./views/BaseHomeView.vue'],resolve);
 const MovieView = resolve => require(['./views/BaseMovieView.vue'],resolve);
@@ -8,6 +9,8 @@ const StarView = resolve => require(['./views/BaseStarView.vue'],resolve);
 const FunnyView = resolve => require(['./views/BaseFunnyView.vue'],resolve);
 const NewView = resolve => require(['./views/BaseNewView.vue'],resolve);
 const SpecialView = resolve => require(['./views/BaseSpecialView.vue'],resolve);
+// 分类
+const Classify = resolve => require(['./views/BaseClassify.vue'],resolve);
 const NotFound = resolve => require(['./views/404.vue'],resolve);
 
 let routes = [
@@ -62,6 +65,11 @@ let routes = [
                 name: 'SpecialView'
             }
         ]
+    },
+    {
+        path: '/classify',
+        component: Classify,
+        name: 'Classify'
     },
     {
         path: '/',

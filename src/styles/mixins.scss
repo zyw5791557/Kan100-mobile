@@ -159,132 +159,125 @@
 
 @mixin moduleFontSize($topSelector) {
     #{$topSelector} {
-        .mainer {
-            .header-module {
-                h2 {
-                    font-size: 18px;
-                }
-                a {
-                    font-size: 14px;
-                }
+        .header-module {
+            h2 {
+                font-size: 18px;
             }
-            .piclist-time {
-                font-size: 12px;
-            }
-            .m-pic-list .piclist-img {
-                .c-collect,
-                .c-date {
-                    font-size: 11px;
-                }
-                .c-rank {
-                    font-size: 12px;
-                    font-size: 10px;
-                }
-                .c-date-score {
-                    font-size: 16px;
-                    .score-item-after {
-                        font-size: 12px;
-                    }
-                }
-            }
-            .piclist-title {
-                .c-title {
-                    font-size: 14px;
-                }
-                .c-info {
-                    font-size: 12px;
-                }
-            }
-            .m-new-list {
+            a {
                 font-size: 14px;
             }
+        }
+        .piclist-time {
+            font-size: 12px;
+        }
+        .m-pic-list .piclist-img {
+            .c-collect,
+            .c-date {
+                font-size: 11px;
+            }
+            .c-rank {
+                font-size: 12px;
+                font-size: 10px;
+            }
+            .c-date-score {
+                font-size: 16px;
+                .score-item-after {
+                    font-size: 12px;
+                }
+            }
+        }
+        .piclist-title {
+            .c-title {
+                font-size: 14px;
+            }
+            .c-info {
+                font-size: 12px;
+            }
+        }
+        .m-new-list {
+            font-size: 14px;
         }
     }
 
     [data-dpr="2"] #{$topSelector} {
-        .mainer {
-            .header-module {
-                h2 {
-                    font-size: 36px;
-                }
-                a {
-                    font-size: 28px;
-                }
+        .header-module {
+            h2 {
+                font-size: 36px;
             }
-            .piclist-time {
-                font-size: 24px;
-            }
-            .m-pic-list .piclist-img {
-                .c-collect,
-                .c-date {
-                    font-size: 22px;
-                }
-                .c-rank {
-                    font-size: 24px;
-                    font-size: 20px;
-                }
-                .c-date-score {
-                    font-size: 36px;
-                    .score-item-after {
-                        font-size: 24px;
-                    }
-                }
-            }
-            .piclist-title {
-                .c-title {
-                    font-size: 28px;
-                }
-                .c-info {
-                    font-size: 24px;
-                }
-            }
-            .m-new-list {
+            a {
                 font-size: 28px;
             }
-            
+        }
+        .piclist-time {
+            font-size: 24px;
+        }
+        .m-pic-list .piclist-img {
+            .c-collect,
+            .c-date {
+                font-size: 22px;
+            }
+            .c-rank {
+                font-size: 24px;
+                font-size: 20px;
+            }
+            .c-date-score {
+                font-size: 36px;
+                .score-item-after {
+                    font-size: 24px;
+                }
+            }
+        }
+        .piclist-title {
+            .c-title {
+                font-size: 28px;
+            }
+            .c-info {
+                font-size: 24px;
+            }
+        }
+        .m-new-list {
+            font-size: 28px;
         }
     }
 
     [data-dpr="3"] #{$topSelector} {
-        .mainer {
-            .header-module {
-                h2 {
-                    font-size: 54px;
-                }
-                a {
-                    font-size: 42px;
-                }
+        .header-module {
+            h2 {
+                font-size: 54px;
             }
-            .piclist-time {
-                font-size: 36px;
-            }
-            .m-pic-list .piclist-img {
-                .c-collect,
-                .c-date {
-                    font-size: 33px;
-                }
-                .c-rank {
-                    font-size: 36px;
-                    font-size: 30px;
-                }
-                .c-date-score {
-                    font-size: 48px;
-                    .score-item-after {
-                        font-size: 36px;
-                    }
-                }
-            }
-            .piclist-title {
-                .c-title {
-                    font-size: 42px;
-                }
-                .c-info {
-                    font-size: 36px;
-                }
-            }
-            .m-new-list {
+            a {
                 font-size: 42px;
             }
+        }
+        .piclist-time {
+            font-size: 36px;
+        }
+        .m-pic-list .piclist-img {
+            .c-collect,
+            .c-date {
+                font-size: 33px;
+            }
+            .c-rank {
+                font-size: 36px;
+                font-size: 30px;
+            }
+            .c-date-score {
+                font-size: 48px;
+                .score-item-after {
+                    font-size: 36px;
+                }
+            }
+        }
+        .piclist-title {
+            .c-title {
+                font-size: 42px;
+            }
+            .c-info {
+                font-size: 36px;
+            }
+        }
+        .m-new-list {
+            font-size: 42px;
         }
     }
 }

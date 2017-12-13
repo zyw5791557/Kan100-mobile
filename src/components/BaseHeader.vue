@@ -39,7 +39,7 @@ export default {
         align-items: center;
         justify-content: space-between;
         padding: 0 $gap;
-        height: 1.222222rem;
+        height: $headerHeight;
         .logo {
             display: block;
             width: 3.046296rem;
