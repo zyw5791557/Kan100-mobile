@@ -3,18 +3,13 @@ import Vue from 'vue'
 import App from './App'
 
 // Mint-UI
-import Mint from 'mint-ui';
-import 'mint-ui/lib/style.css';
+import { InfiniteScroll } from 'mint-ui';
 
-Vue.use(Mint);
+Vue.use(InfiniteScroll);
 
 import VueRouter from 'vue-router'
 // import store from './vuex/store'
 // import Vuex from 'vuex'
-// axios
-import axios from 'axios'
-
-Vue.prototype.$axios = axios;     // Vue2.0+官方推荐
 
 // 进度条
 import NProgress from 'nprogress';
@@ -25,9 +20,9 @@ Vue.prototype.$NProgress = NProgress;
 import routes from './routes'
 
 import { setLocalStorage, getLocalStorage } from './api/api';
-// import api_port from './api/api_address';
+import api_port from './api/api_address';
 
-// Vue.use(api_port)
+Vue.use(api_port)
 Vue.use(VueRouter)
 // Vue.use(Vuex)
 

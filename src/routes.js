@@ -11,6 +11,8 @@ const NewView = resolve => require(['./views/BaseNewView.vue'],resolve);
 const SpecialView = resolve => require(['./views/BaseSpecialView.vue'],resolve);
 // 分类
 const Classify = resolve => require(['./views/BaseClassify.vue'],resolve);
+// 追番表
+const Timeline = resolve => require(['./views/BaseAnimeTimeline.vue'],resolve);
 const NotFound = resolve => require(['./views/404.vue'],resolve);
 
 let routes = [
@@ -70,6 +72,11 @@ let routes = [
         path: '/classify',
         component: Classify,
         name: 'Classify'
+    },
+    {
+        path: '/timeline',
+        component: Timeline,
+        name: 'Timeline'
     },
     {
         path: '/',
