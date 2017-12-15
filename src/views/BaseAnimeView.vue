@@ -242,6 +242,7 @@ export default {
                 type: '每日放送',
                 headLinkName: '查看追番表',
                 headLinkIcon: 'more',
+                routerName: 'Timeline',
                 rank: false,
                 selectBtn: true,
                 piclistData: [

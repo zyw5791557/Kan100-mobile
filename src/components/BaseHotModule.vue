@@ -27,10 +27,10 @@ export default {
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
-                <a href="javascript:;" v-if="loadData.headLinkName">
+                <router-link :to="{ name: loadData.routerName }" v-if="loadData.headLinkName">
                     <span>{{ loadData.headLinkName }}</span>
                     <i :class="loadData.headLinkIcon"></i>
-                </a>
+                </router-link>
             </div>
             <div class="m-pic-list">
                 <ul>

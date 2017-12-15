@@ -50,10 +50,10 @@ export default {
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
-                <a href="javascript:;" v-if="loadData.headLinkName">
+                <router-link :to="{ name: loadData.routerName }" v-if="loadData.headLinkName">
                     <span>{{ loadData.headLinkName }}</span>
                     <i></i>
-                </a>
+                </router-link>
             </div>
             <div v-if="loadData.selectBtn" class="m-tabs-week">
                 <a v-for="(itm,idx) in weekData" :key="idx" @click.stop="selectTabs(itm[0],$event)" class="m-tabs-item" href="javascript:void(0);">{{ itm[1] }}</a>

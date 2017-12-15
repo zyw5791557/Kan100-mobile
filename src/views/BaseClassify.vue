@@ -295,6 +295,7 @@ export default {
             font-weight: 600;
         }
         .return-icon {
+            margin-left: .12963rem;
             width: .222222rem;
             height: .407407rem;
             background-image: url('/static/images/back.png');

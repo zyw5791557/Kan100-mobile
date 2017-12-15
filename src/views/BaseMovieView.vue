@@ -153,6 +153,7 @@ export default {
                 type: '特色电影好片',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
+                routerName: 'Classify',
                 piclistData: [
                     {   
                         url: '/home',
@@ -421,6 +422,7 @@ export default {
                 type: '网络电影',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
+                routerName: 'Classify',
                 newsModule: true,
                 piclistData: [
                     {   
@@ -465,6 +467,7 @@ export default {
                 type: '华语电影',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
+                routerName: 'Classify',
                 newsModule: true,
                 piclistData: [
                     {
@@ -509,6 +512,7 @@ export default {
                 type: '欧美电影',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
+                routerName: 'Classify',
                 newsModule: true,
                 piclistData: [
                     {
@@ -553,6 +557,7 @@ export default {
                 type: '日韩电影',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
+                routerName: 'Classify',
                 newsModule: true,
                 piclistData: [
                     {
