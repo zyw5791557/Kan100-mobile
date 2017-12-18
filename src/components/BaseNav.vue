@@ -39,7 +39,18 @@ export default {
                     name: '专题',
                     routerName: 'SpecialView'
                 }
-            ]
+            ],
+            backEnable: false
+        }
+    },
+    watch: {
+        '$route' (to,from) {
+            // 对路由变化做出响应
+            if(this.$route.query.backEnable) {
+                this.backEnable = true;
+            }else {
+                this.backEnable = false;
+            }
         }
     },
     methods: {
@@ -49,6 +60,11 @@ export default {
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto'
             });
+            if(this.$route.query.backEnable === 'true' || this.$route.query.backEnable === true) {
+                this.backEnable = true;
+            }else {
+                this.backEnable = false;
+            }
         }
     },
     mounted () {
@@ -58,7 +74,10 @@ export default {
 </script>
 
 <template>
-    <nav class="nav" v-once>
+    <nav :class="{ backEnable: backEnable }" class="nav">
+        <a class="back" @click="$router.back()">
+            <i class="menu-back-icon"></i>
+        </a>
         <div class="content">
             <div class="swiper-container" id="nav-swiper--head">
                 <div class="swiper-wrapper">
@@ -66,14 +85,38 @@ export default {
                 </div>
             </div>
         </div>
-        <a class="moreLinks" href="">
+        <router-link class="moreLinks" to="">
             <i class="menu-more-icon"></i>
-        </a>
+        </router-link>
     </nav>
 </template>
 
 <style lang="scss" scoped>
 @import '../styles/vars.scss';
+    .backEnable {
+        .swiper-slide:first-child {
+            &:before {
+                content: '';
+                display: inline-block;
+                width: .425926rem;
+            }
+        }
+        .back {
+            position: absolute;
+            z-index: 999;
+            left: .277778rem;
+            width: .925926rem;
+            height: .851852rem;
+            background: -webkit-linear-gradient(right, rgba(255,255,255,.7),rgba(255,255,255,1));
+            .menu-back-icon {
+                display: block;
+                width: .925926rem;
+                height: .851852rem;
+                background: url('/static/images/back.png') no-repeat left center;
+                background-size: .222222rem .407407rem;
+            }
+        }
+    }
     .swiper-slide {
         color: $baseColor;
         line-height: .851852rem;
@@ -86,6 +129,7 @@ export default {
                 width: .407407rem;
             }
         }
+        
         &.router-link-exact-active {
             color: $orange;
             &:after {

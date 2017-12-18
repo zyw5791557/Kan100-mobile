@@ -2,6 +2,7 @@
 const Home = resolve => require(['./views/Home.vue'],resolve);
 const HomeView = resolve => require(['./views/BaseHomeView.vue'],resolve);
 const MovieView = resolve => require(['./views/BaseMovieView.vue'],resolve);
+const MovieDetailView = resolve => require(['./views/BaseMovieDetailView.vue'],resolve);
 const TeleplayView = resolve => require(['./views/BaseTeleplayView.vue'],resolve);
 const ShowView = resolve => require(['./views/BaseShowView.vue'],resolve);
 const AnimeView = resolve => require(['./views/BaseAnimeView.vue'],resolve);
@@ -30,6 +31,11 @@ let routes = [
                 path: 'movieView',
                 component: MovieView,
                 name: 'MovieView'
+            },
+            {
+                path: 'movieDetailView/:id',
+                component: MovieDetailView,
+                name: 'MovieDetailView'
             },
             {
                 path: 'teleplayView',

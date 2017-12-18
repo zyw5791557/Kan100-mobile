@@ -18,6 +18,16 @@ export default {
         scoreAfterFilter (val) {
             return val.substr(-1);
         }
+    },
+    methods: {
+        routeGuide(item) {
+            let o = {
+                name: this.loadData.itemRouteName ? this.loadData.itemRouteName : item.routeName,
+                params: { id: item.id },
+                query: { backEnable: this.loadData.backEnable }
+            };
+            return o;
+        }
     }
 }
 </script>
@@ -27,7 +37,7 @@ export default {
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
-                <router-link :to="{ name: loadData.routerName }" v-if="loadData.headLinkName">
+                <router-link :to="{ name: loadData.routeName }" v-if="loadData.headLinkName">
                     <span>{{ loadData.headLinkName }}</span>
                     <i :class="loadData.headLinkIcon"></i>
                 </router-link>
@@ -36,7 +46,7 @@ export default {
                 <ul>
                     <li v-for="(item,index) in loadData.piclistData" :key="index">
                         <div class="piclist-img">
-                            <router-link class="piclist-link" :to="item.url" :title="item.title" :style="`background-image: url(${item.img})`">
+                            <router-link class="piclist-link" :to="routeGuide(item)" :title="item.title" :style="`background-image: url(${item.img})`">
                                 <div class="c-rt">
                                     <i class="c-collect" v-if="item.catname">{{ item.catname }}</i>
                                 </div>
@@ -51,10 +61,10 @@ export default {
                         </div>
                         <div class="piclist-title">
                             <div class="c-title">
-                                <router-link class="text-ellipsis" :to="item.url">{{ item.title }}</router-link>
+                                <router-link class="text-ellipsis" :to="routeGuide(item)">{{ item.title }}</router-link>
                             </div>
                             <div class="c-info">
-                                <router-link class="text-ellipsis" :to="item.url">{{ item.des }}</router-link>
+                                <router-link class="text-ellipsis" :to="routeGuide(item)">{{ item.des }}</router-link>
                             </div>
                         </div>
                     </li>

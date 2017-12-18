@@ -103,7 +103,7 @@ export default {
     <div class="timeline-container">
         <div class="timeline">
             <header class="return-header">
-                <router-link to="/" class="return-icon"></router-link>
+                <a @click="$router.back()" class="return-icon"></a>
                 <span class="return-title">追番表</span>
                 <i></i>
             </header>
@@ -178,7 +178,7 @@ export default {
         } 
         .swiper-slide {
             width: auto;
-            width: .851852rem;
+            min-width: .851852rem;
             padding: 0 .212963rem;
             span {
                 display: block;
@@ -241,15 +241,42 @@ export default {
         .return-header {
             font-size: 18px;
         }
+        .t-date,
+        .date-time,
+        .tl-label {
+            font-size: 12px;
+        }
+        .t-week,
+        .tl-title {
+            font-size: 14px;
+        }
     }
     [data-dpr="2"] .timeline {
         .return-header {
             font-size: 36px;
         }
+        .t-date,
+        .date-time,
+        .tl-label {
+            font-size: 24px;
+        }
+        .t-week,
+        .tl-title {
+            font-size: 28px;
+        }
     }
     [data-dpr="3"] .timeline {
         .return-header {
             font-size: 54px;
+        }
+        .t-date,
+        .date-time,
+        .tl-label {
+            font-size: 36px;
+        }
+        .t-week,
+        .tl-title {
+            font-size: 42px;
         }
     }
 </style>

@@ -64,9 +64,11 @@ export default {
                 type: '重磅热播',
                 headLinkName: '换一换',
                 headLinkIcon: 'change',
+                backEnable: true,
                 piclistData: [
                     {   
-                        url: '',
+                        id: 123456,
+                        routeName: '',
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '电视剧',
                         collect: '更新至40集',
@@ -75,7 +77,8 @@ export default {
                         des: '郑秋冬拆骗局攻陈修风'
                     },
                     {
-                        url: '',
+                        id: 123456,
+                        routeName: '',
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -84,7 +87,8 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        url: '',
+                        id: 123456,
+                        routeName: '',
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -93,7 +97,8 @@ export default {
                         des: '章子怡：只有她会这样对我'
                     },
                     {
-                        url: '',
+                        id: 123456,
+                        routeName: '',
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '新片',
                         collect: '',
@@ -102,7 +107,8 @@ export default {
                         des: '吴宇森展教科书式暴力美学'
                     },
                     {
-                        url: '',
+                        id: 123456,
+                        routeName: '',
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '更新至40集',
@@ -111,7 +117,8 @@ export default {
                         des: '小米心忧马克患老年痴呆老年痴呆'
                     }, 
                     {
-                        url: '',
+                        id: 123456,
+                        routeName: '',
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '专题',
                         collect: '',
@@ -125,6 +132,7 @@ export default {
                 type: '电影',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
+                routeName: 'MovieView',
                 piclistData: [
                     {   
                         url: '/home',
@@ -177,6 +185,7 @@ export default {
                 type: '电视剧',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
+                routeName: 'TeleplayView',
                 piclistData: [
                     {   
                         url: '/home',
@@ -229,6 +238,7 @@ export default {
                 type: '综艺',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
+                routeName: 'ShowView',
                 piclistData: [
                     {   
                         url: '/home',
@@ -281,6 +291,7 @@ export default {
                 type: '动漫',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
+                routeName: 'AnimeView',
                 piclistData: [
                     {   
                         url: '/home',
