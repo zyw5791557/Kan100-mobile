@@ -15,7 +15,6 @@ export default {
 	data () {
 		return {
 			base_header_searchPlaceholderVal: '将军在上',
-			
 		}
 	},
 	methods: {

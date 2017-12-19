@@ -60,7 +60,7 @@ export default {
             </div>
             <div class="swiper-container" :id="`base-swiper--module${loadData.id}`">
                 <ul class="swiper-wrapper m-pic-list">
-                    <li v-for="(item,index) in loadData.piclistData" :key="index" class="swiper-slide">
+                    <li v-for="(item,index) in loadData.piclistData" :key="index" :style="`width:${loadData.itemWidth}`" :class="{ 'exact-width': loadData.itemWidth }" class="swiper-slide">
                         <div class="piclist-time" v-if="item.timeline">
                             <span class="c-timeline">{{ item.timeline }}</span>
                         </div>
@@ -82,8 +82,8 @@ export default {
                             </router-link>
                         </div>
                         <div class="piclist-title">
-                            <div class="c-title">
-                                <router-link class="text-ellipsis" :to="item.url">{{ item.title }}</router-link>
+                            <div class="c-title" :class="{ 'text-ellipsis-2': loadData.ellipsisLines }">
+                                <router-link :class="{ 'text-ellipsis': !(loadData.ellipsisLines) }" :to="item.url">{{ item.title }}</router-link>
                             </div>
                             <div class="c-info">
                                 <router-link class="text-ellipsis" :to="item.url">{{ item.des }}</router-link>
@@ -186,12 +186,17 @@ export default {
             position: relative;
             overflow: hidden;
             border-radius: $itemRadius;
-            @include propor(149.68944099378882% );
+            @include propor(149.68944099378882%);
             .piclist-link {
                 @include piclink($boxShadow);
                 @include c-rt($itemRadius);
                 @include c-lt;
                 @include c-lb($orange);
+            }
+        }
+        &.exact-width {
+            .piclist-img {
+                @include propor(56.02836879432624%);
             }
         }
         @include picTitle($baseColor);

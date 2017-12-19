@@ -37,7 +37,7 @@ export default {
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
-                <router-link :to="{ name: loadData.routeName }" v-if="loadData.headLinkName">
+                <router-link :to="{ name: loadData.routeName }" v-if="loadData.headLinkName || loadData.headLinkIcon">
                     <span>{{ loadData.headLinkName }}</span>
                     <i :class="loadData.headLinkIcon"></i>
                 </router-link>
@@ -60,10 +60,10 @@ export default {
                             </router-link>
                         </div>
                         <div class="piclist-title">
-                            <div class="c-title">
-                                <router-link class="text-ellipsis" :to="routeGuide(item)">{{ item.title }}</router-link>
+                            <div class="c-title" :class="{ 'text-ellipsis-2': loadData.ellipsisLines }">
+                                <router-link :class="{ 'text-ellipsis': !(loadData.ellipsisLines) }" :to="routeGuide(item)">{{ item.title }}</router-link>
                             </div>
-                            <div class="c-info">
+                            <div class="c-info" v-if="item.des">
                                 <router-link class="text-ellipsis" :to="routeGuide(item)">{{ item.des }}</router-link>
                             </div>
                         </div>
@@ -123,6 +123,13 @@ export default {
                     }
                     i.more {
                         @include smallIcon('/static/images/more.png');
+                    }
+                    i.arrow {
+                        width: .138889rem;
+                        height: .138889rem;
+                        border-right: .027778rem solid #999;
+                        border-bottom: .027778rem solid #999;
+                        transform: rotate(-45deg);
                     }
                 }
             }

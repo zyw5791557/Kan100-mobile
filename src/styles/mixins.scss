@@ -112,7 +112,7 @@
     .piclist-title {
         padding: .212963rem 0 .462963rem 0;
         .c-title {
-            height: .425926rem;
+            // height: .425926rem;
             line-height: .425926rem;
             overflow: hidden;
             text-align: left;
@@ -154,6 +154,13 @@
     }
 }
 
+/* 多行文本溢出省略 */
+@mixin text-ellipsis-n($n) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $n;
+    overflow: hidden;
+}
 
 /* 主页 热播和基础模块字体大小整合 */
 

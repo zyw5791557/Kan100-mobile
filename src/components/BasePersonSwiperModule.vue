@@ -37,7 +37,8 @@ export default {
                     <li v-for="(item,index) in loadData.personlistData" class="swiper-slide">
                         <router-link :to="item.url" :class="{ fire: index < 3 && loadData.fire }">
                             <img :src="item.img" alt="" width="100%">
-                            <div class="c-title">{{ item.name }}</div>
+                            <div class="c-title text-ellipsis">{{ item.name }}</div>
+                            <div v-if="item.sup" class="c-sup text-ellipsis">{{ item.sup }}</div>
                         </router-link>
                     </li>
                 </ul>
@@ -89,6 +90,10 @@ export default {
         }
         .c-title {
             margin-top: .277778rem;
+        }
+        .c-sup {
+            @extend .c-title;
+            color:#999;
         }
         &.fire:after {
             content: ' ';

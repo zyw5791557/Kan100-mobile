@@ -3,9 +3,9 @@ import Vue from 'vue'
 import App from './App'
 
 // Mint-UI
-import { InfiniteScroll } from 'mint-ui';
-
-Vue.use(InfiniteScroll);
+import Mint  from 'mint-ui';
+import 'mint-ui/lib/style.css';
+Vue.use(Mint);
 
 import VueRouter from 'vue-router'
 // import store from './vuex/store'
