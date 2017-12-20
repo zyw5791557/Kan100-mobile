@@ -18,16 +18,6 @@ export default {
         scoreAfterFilter (val) {
             return val.substr(-1);
         }
-    },
-    methods: {
-        routeGuide(item) {
-            let o = {
-                name: this.loadData.itemRouteName ? this.loadData.itemRouteName : item.routeName,
-                params: { id: item.id },
-                query: { backEnable: this.loadData.backEnable }
-            };
-            return o;
-        }
     }
 }
 </script>
@@ -37,16 +27,16 @@ export default {
         <div class="mainer">
             <div class="header-module">
                 <h2>{{ loadData.type }}</h2>
-                <router-link :to="{ name: loadData.routeName }" v-if="loadData.headLinkName || loadData.headLinkIcon">
+                <a v-if="loadData.headLinkName || loadData.headLinkIcon" @click="$emit('popup')" href="javascript:void(0);">
                     <span>{{ loadData.headLinkName }}</span>
                     <i :class="loadData.headLinkIcon"></i>
-                </router-link>
+                </a>
             </div>
             <div class="m-pic-list">
                 <ul>
-                    <li v-for="(item,index) in loadData.piclistData" :key="index">
+                    <li v-for="(item,index) in loadData.piclistData" :key="index" v-if="index < 6">
                         <div class="piclist-img">
-                            <router-link class="piclist-link" :to="routeGuide(item)" :title="item.title" :style="`background-image: url(${item.img})`">
+                            <a :href="item.url" class="piclist-link" :title="item.title" :style="`background-image: url(${item.img})`">
                                 <div class="c-rt">
                                     <i class="c-collect" v-if="item.catname">{{ item.catname }}</i>
                                 </div>
@@ -57,14 +47,14 @@ export default {
                                         ><i class="score-item-after" v-if="item.score">{{ item.score | scoreAfterFilter }}</i>
                                     </span>
                                 </div>
-                            </router-link>
+                            </a>
                         </div>
                         <div class="piclist-title">
-                            <div class="c-title">
-                                <router-link class="text-ellipsis" :to="routeGuide(item)">{{ item.title }}</router-link>
+                            <div class="c-title" :class="{ 'text-ellipsis-2': loadData.ellipsisLines }">
+                                <a :href="item.url" :class="{ 'text-ellipsis': !(loadData.ellipsisLines) }">{{ item.title }}</a>
                             </div>
                             <div class="c-info" v-if="item.des">
-                                <router-link class="text-ellipsis" :to="routeGuide(item)">{{ item.des }}</router-link>
+                                <a :href="item.url" class="text-ellipsis">{{ item.des }}</a>
                             </div>
                         </div>
                     </li>
@@ -74,7 +64,7 @@ export default {
             <div class="m-new-list" v-if="loadData.newsData">
                 <ul>
                     <li v-for="(item,index) in loadData.newsData" :key="index">
-                        <router-link :to="item.url" class="text-ellipsis">{{ item.msg }}</router-link>
+                        <a :to="item.url" class="text-ellipsis">{{ item.msg }}</a>
                     </li>
                 </ul>
             </div>
@@ -114,6 +104,7 @@ export default {
                     font-weight: 600;
                 }
                 a {
+                    padding: .266667rem 0 .266667rem .266667rem;
                     display: flex;
                     align-items: center;
                     color: $orange;
@@ -123,6 +114,13 @@ export default {
                     }
                     i.more {
                         @include smallIcon('/static/images/more.png');
+                    }
+                    i.arrow {
+                        width: .138889rem;
+                        height: .138889rem;
+                        border-right: .027778rem solid #999;
+                        border-bottom: .027778rem solid #999;
+                        transform: rotate(-45deg);
                     }
                 }
             }

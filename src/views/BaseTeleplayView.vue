@@ -96,9 +96,11 @@ export default {
             hotModuleData: {
                 type: '热剧精选',
                 newsModule: true,
+                backEnable: true,
+                itemRouteName: 'TeleplayDetailView',
                 piclistData: [
                     {   
-                        url: '',
+                        id: 456789,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '1080P',
                         collect: '更新至21集',
@@ -107,7 +109,7 @@ export default {
                         des: '看丘吉尔霸气强怼国王'
                     },
                     {
-                        url: '',
+                        id: 456789,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -116,7 +118,7 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        url: '',
+                        id: 456789,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -125,7 +127,7 @@ export default {
                         des: '章子怡：只有她会这样对我'
                     },
                     {
-                        url: '',
+                        id: 456789,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '新片',
                         collect: '',
@@ -134,7 +136,7 @@ export default {
                         des: '吴宇森展教科书式暴力美学'
                     },
                     {
-                        url: '',
+                        id: 456789,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -143,7 +145,7 @@ export default {
                         des: '小米心忧马克患老年痴呆老年痴呆'
                     }, 
                     {
-                        url: '',
+                        id: 456789,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '预告',
                         collect: '更新至40集',

@@ -30,7 +30,9 @@ export default {
         }
     },
     mounted() {
-        this.init();
+        this.$nextTick(() => {
+            this.init();
+        });
     }
 }
 </script>

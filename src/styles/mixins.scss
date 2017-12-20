@@ -162,6 +162,56 @@
     overflow: hidden;
 }
 
+/* 播放源 icon position */
+@mixin sourceIcon {
+    &.qq  {
+        background-position: 0 -4.28rem;
+    }
+    &.qiyi  {
+        background-position: 0 -30.96rem;
+    }
+    &.youku  {
+        background-position: 0 -12.8rem;
+    }
+    &.sohu  {
+        background-position: 0 -8.533333rem;
+    }
+    &.tudou  {
+        background-position: 0 -3.186667rem;
+    }
+    &.mgtv  {
+        background-position: 0 -5.333333rem;
+    }
+    &.acfun  {
+        background-position: 0 -23.453333rem;
+    }
+    &.pps  {
+        background-position: 0 -26.666667rem;
+    }
+    &.pptv  {
+        background-position: 0 -32rem;
+    }
+    &.sina  {
+        background-position: 0 -28.826667rem;
+    }
+    &.kumi  {
+        background-position: 0 -21.333333rem;
+    }
+    &.leshi  {
+        background-position: 0 -1.053333rem;
+    }
+    &.fengxing  {
+        background-position: 0 -7.466667rem;
+    }
+    &.xiankan  {
+        background-position: 0 -11.733333rem;
+    }
+    &.56com  {
+        background-position: 0 -.026667rem;
+    }
+}
+
+
 /* 主页 热播和基础模块字体大小整合 */
 
 @mixin moduleFontSize($topSelector) {
@@ -201,7 +251,8 @@
                 font-size: 12px;
             }
         }
-        .m-new-list {
+        .m-new-list,
+        .collect-item {
             font-size: 14px;
         }
     }
@@ -242,7 +293,8 @@
                 font-size: 24px;
             }
         }
-        .m-new-list {
+        .m-new-list,
+        .collect-item {
             font-size: 28px;
         }
     }
@@ -283,7 +335,8 @@
                 font-size: 36px;
             }
         }
-        .m-new-list {
+        .m-new-list,
+        .collect-item {
             font-size: 42px;
         }
     }

@@ -35,7 +35,7 @@ export default {
             <div class="card-info">
                 <h1 class="c-title text-ellipsis">
                     {{ loadData.title }}
-                    <span class="c-meta">{{ loadData.meta }}</span>
+                    <span v-if="loadData.meta" class="c-meta">{{ loadData.meta }}</span>
                 </h1>
                 <p class="c-score">
                     <i>豆</i>
@@ -47,8 +47,8 @@ export default {
                 <p class="c-time">{{ loadData.time }}</p>
                 <a class="playBtn" href="javascript:void(0);">立即播放</a>
                 <a class="shareBtn" href="javascript:void(0);">分享</a>
-                <a @click="$emit('openPopup')" class="sourceBtn youku" href="javascript:void(0);">
-                    {{ loadData.default_source }}
+                <a @click="$emit('popup')" :class="loadData.default_source" class="sourceBtn" href="javascript:void(0);">
+                    {{ loadData.default_source_title }}
                 </a>
             </div>
         </div>
@@ -191,9 +191,7 @@ export default {
             border-left: .027778rem solid #999;
             border-top: .027778rem solid #999;
         }
-        &.youku  {
-            background-position: 0 -4.28rem;
-        }
+        @include sourceIcon;
     }
 }
 .wiki-des {

@@ -68,7 +68,9 @@ export default {
         }
     },
     mounted () {
-        this.init();
+        this.$nextTick(() => {
+            this.init();
+        });
     }
 }
 </script>
@@ -130,7 +132,8 @@ export default {
             }
         }
         
-        &.router-link-exact-active {
+        &.router-link-exact-active,
+        &.router-link-active {
             color: $orange;
             &:after {
                 content: '';
