@@ -40,3 +40,7 @@ i {
 .base-person-swiper {
   overflow: hidden;
 }
+
+.home > .container {
+  overflow: hidden;
+}

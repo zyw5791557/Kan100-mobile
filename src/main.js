@@ -14,7 +14,6 @@ import VueRouter from 'vue-router'
 // 进度条
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-
 Vue.prototype.$NProgress = NProgress;
 
 import routes from './routes'

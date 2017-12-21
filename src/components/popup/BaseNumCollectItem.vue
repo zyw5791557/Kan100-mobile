@@ -8,16 +8,23 @@ export default {
     },
     data () {
         return {
-            loadData: this.data
+            loadData: this.data,
+            sortFlag: true,
         }
     },
     methods: {
         init() {
             new Swiper('#clips-swiper-module',{
+                direction: 'vertical',
                 freeMode: true,
                 freeModeMomentumRatio: 0.5,
-                slidesPerView: 'auto',    
+                slidesPerView: 'auto',
+                roundLengths : true, 
             });
+        },
+        sortCollect() {
+            this.loadData.playlistData.reverse();
+            this.sortFlag = !this.sortFlag;
         }
     },
     mounted () {
@@ -31,15 +38,24 @@ export default {
 <template>
     <div class="popup-container">
         <div class="header-module">
-            <h2>{{ loadData.type }}</h2>
-            <a @click="$emit('close')" href="javascript:void(0);"></a>
+            <div class="flex-left">
+                <h2>{{ loadData.type }}</h2>
+                <div @click="sortCollect" class="sort-box">
+                    <a href="javascript:void(0);">排序</a>
+                    <span>
+                        <i :class="{ active: sortFlag }" class="fa fa-sort-asc" aria-hidden="true"></i>
+                        <i :class="{ active: !sortFlag }" class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <a @click="$emit('close')" class="close" href="javascript:void(0);"></a>
         </div>
         <div id="clips-swiper-module" class="m-pic-list swiper-container">
-            <ul class="swiper-wrapper">
-                <li v-for="(item,index) in loadData.playlistData" :key="index" class="swiper-slide">
-                    <a :href="item" class="collect-item">{{ index + 1 }}</a>
-                </li>
-            </ul>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a v-for="(item,index) in loadData.playlistData" :key="index" :href="item" class="collect-item">{{ sortFlag ? index + 1 : loadData.playlistData.length - index }}</a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -55,12 +71,41 @@ export default {
         line-height: 1.185185rem;
         border-bottom: $moduleBorder;
         padding: 0 $gap;
-        h2 {
-            color: $baseColor;
-            font-size: 18px;
-            font-weight: 600;
+        .flex-left {
+            display: flex;
+            h2 {
+                color: $baseColor;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .sort-box {
+                display: flex;
+                margin-left: .675926rem;
+                a { color: $orange };
+                span {
+                    margin-left: .12037rem;
+                    width: .12037rem;
+                    position: relative;
+                    i {
+                        color: #b3b3b3;
+                        &.active {
+                            color: $orange;
+                        }
+                    }
+                    .fa-sort-asc {
+                        position: absolute;
+                        left: 0;
+                        top: .462963rem;
+                    }
+                    .fa-sort-desc {
+                        position: absolute;
+                        left: 0;
+                        top: .537037rem;
+                    }
+                }
+            }
         }
-        a {
+        .close {
             width: .351852rem;
             height: .351852rem;
             padding: .266667rem 0 .266667rem .266667rem;
@@ -71,22 +116,24 @@ export default {
         }
     }
     #clips-swiper-module {
-        padding: .287037rem $gap 0;
+        padding: .287037rem .555556rem 0;
         max-height: 10.87037rem;
         .swiper-slide {
             display: flex;
+            flex-wrap: wrap;
+        }
+        a {
+            margin-right: .712963rem;
+            margin-bottom: .555556rem;
             width: 1.203704rem;
-            justify-content: flex-start;
-            margin-bottom: .277778rem;
-            a {
-                display: block;
-                width: 1.203704rem;
-                height: 1.203704rem;
-                line-height: 1.203704rem;
-                background-color: $collectBallColor;
-                border-radius: 50%;
-                color: $baseColor;
-                text-align: center;
+            height: 1.203704rem;
+            line-height: 1.203704rem;
+            background-color: $collectBallColor;
+            border-radius: 50%;
+            color: $baseColor;
+            text-align: center;
+            &:nth-child(5n) {
+                margin-right: 0;
             }
         }
     }

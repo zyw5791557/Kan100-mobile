@@ -6,7 +6,9 @@ const MovieDetailView = resolve => require(['./views/BaseMovieDetailView.vue'],r
 const TeleplayView = resolve => require(['./views/BaseTeleplayView.vue'],resolve);
 const TeleplayDetailView = resolve => require(['./views/BaseTeleplayDetailView.vue'],resolve);
 const ShowView = resolve => require(['./views/BaseShowView.vue'],resolve);
+const ShowDetailView = resolve => require(['./views/BaseShowDetailView.vue'],resolve);
 const AnimeView = resolve => require(['./views/BaseAnimeView.vue'],resolve);
+const AnimeDetailView = resolve => require(['./views/BaseAnimeDetailView.vue'],resolve);
 const StarView = resolve => require(['./views/BaseStarView.vue'],resolve);
 const FunnyView = resolve => require(['./views/BaseFunnyView.vue'],resolve);
 const NewView = resolve => require(['./views/BaseNewView.vue'],resolve);
@@ -54,9 +56,19 @@ let routes = [
                 name: 'ShowView'
             },
             {
+                path: 'showDetailView/:id',
+                component: ShowDetailView,
+                name: 'ShowDetailView'
+            },
+            {
                 path: 'animeView',
                 component: AnimeView,
                 name: 'AnimeView'
+            },
+            {
+                path: 'animeDetailView/:id',
+                component: AnimeDetailView,
+                name: 'AnimeDetailView'
             },
             {
                 path: 'starView',

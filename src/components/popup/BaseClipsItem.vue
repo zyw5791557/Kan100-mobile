@@ -8,7 +8,7 @@ export default {
     },
     data () {
         return {
-            loadData: this.data
+            loadData: this.data,
         }
     },
     methods: {
@@ -25,6 +25,9 @@ export default {
         this.$nextTick(() => {
             this.init();
         });
+    },
+    updated() {
+        console.log('组件更新')
     }
 }
 </script>
@@ -125,7 +128,7 @@ export default {
             overflow: hidden;
             margin-left: .314815rem;
             .c-title {
-                line-height: .425926rem;
+                line-height: .481481rem;
                 overflow: hidden;
                 a {
                     display: block;

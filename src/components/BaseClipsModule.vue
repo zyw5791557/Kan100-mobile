@@ -146,6 +146,10 @@ export default {
                     @include c-lb($orange);
                 }
             }
+            .c-title {
+                line-height: .481481rem!important;
+                overflow: hidden;
+            }
             @include picTitle($baseColor);
         }
 

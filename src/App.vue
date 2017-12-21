@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-	<div id="app">
+	<div id="ooo">
 		<transition name="fade"
 		            mode="out-in">
 			<router-view></router-view>

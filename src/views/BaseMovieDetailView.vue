@@ -1,6 +1,7 @@
 <script>
 import BaseWikiModule from '@/components/BaseWikiModule';
 import BaseSelectItem from '@/components/popup/BaseSelectItem';
+import BaseImgPlaySwiperModule from '../components/BaseImgPlaySwiperModule.vue';
 import BaseSwiperModule from '@/components/BaseSwiperModule';
 import BasePersonSwiperModule from '@/components/BasePersonSwiperModule';
 import BaseClipsModule from '@/components/BaseClipsModule';
@@ -20,6 +21,7 @@ export default {
     components: {
         BaseWikiModule,
         BaseSelectItem,
+        BaseImgPlaySwiperModule,
         BaseSwiperModule,
         BasePersonSwiperModule,
         BaseClipsModule,
@@ -55,15 +57,10 @@ export default {
                 ]
             },
             playData: {
-                id: '001',
                 type: '正片·预告',
-                headLinkName: '',
-                rank: false,
-                ellipsisLines: true,
-                itemWidth: '26.857142857142857%!important',
                 piclistData: [
                     {
-                        url: '/home/homeView',
+                        url: 'https://www.emlice.top',
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '正',
                         collect: '',
@@ -72,7 +69,7 @@ export default {
                         des: '01:39:40',
                     },
                     {
-                        url: '/home/homeView',
+                        url: 'https://www.emlice.top',
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预',
                         collect: '',
@@ -81,7 +78,7 @@ export default {
                         des: '03:28',
                     },
                     {
-                        url: '/home/homeView',
+                        url: 'https://www.emlice.top',
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预',
                         collect: '',
@@ -90,7 +87,7 @@ export default {
                         des: '03:28',
                     },
                     {
-                        url: '/home/homeView',
+                        url: 'https://www.emlice.top',
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预',
                         collect: '',
@@ -99,7 +96,7 @@ export default {
                         des: '03:28',
                     },
                     {
-                        url: '/home/homeView',
+                        url: 'https://www.emlice.top',
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预',
                         collect: '',
@@ -108,7 +105,7 @@ export default {
                         des: '03:28',
                     },
                     {
-                        url: '/home/homeView',
+                        url: 'https://www.emlice.top',
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预',
                         collect: '',
@@ -117,7 +114,7 @@ export default {
                         des: '03:28',
                     },
                     {
-                        url: '/home/homeView',
+                        url: 'https://www.emlice.top',
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预',
                         collect: '',
@@ -126,7 +123,7 @@ export default {
                         des: '03:28',
                     },
                     {
-                        url: '/home/homeView',
+                        url: 'https://www.emlice.top',
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预',
                         collect: '',
@@ -547,7 +544,9 @@ export default {
                 ]
             },
             selectSourcePopupFlag: false,
-            clipsPopupFlag: false
+            selectSourcePopupCloak: false,
+            clipsPopupFlag: false,
+            clipsPopupCloak: false
         }
     },
     computed: {
@@ -567,22 +566,23 @@ export default {
 
 <template>
     <div class="container">
-        <base-wiki-module :data="wikiData" @openPopup="selectSourcePopupFlag=true"></base-wiki-module>
-        <base-swiper-module :data="playData"></base-swiper-module>  
+        <base-wiki-module :data="wikiData" @popup="selectSourcePopupFlag=true,selectSourcePopupCloak=true;"></base-wiki-module>
+        <base-img-play-swiper-module :data="playData"></base-img-play-swiper-module>  
         <base-person-swiper-module :data="playerData"></base-person-swiper-module>
-        <base-clips-module :data="clipsData" @popup="clipsPopupFlag=true"></base-clips-module>
+        <base-clips-module :data="clipsData" @popup="clipsPopupFlag=true,clipsPopupCloak=true;"></base-clips-module>
         <base-hot-module :data="relatedData"></base-hot-module>
         <base-swiper-module :data="similarData"></base-swiper-module>
         <base-swiper-module :data="hotData"></base-swiper-module>
         <!-- popup -->
         <mt-popup
+            v-if="selectSourcePopupCloak"
             v-model="selectSourcePopupFlag"
             position="bottom"
             class="selectSourcePopup">
             <base-select-item :data="playSource" @close="selectSourcePopupFlag=false"></base-select-item>
         </mt-popup>
         <mt-popup
-            v-if="clipsPopupFlag"
+            v-if="clipsPopupCloak"
             v-model="clipsPopupFlag"
             position="bottom"
             class="clipsPopup">
