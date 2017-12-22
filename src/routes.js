@@ -9,7 +9,10 @@ const ShowView = resolve => require(['./views/BaseShowView.vue'],resolve);
 const ShowDetailView = resolve => require(['./views/BaseShowDetailView.vue'],resolve);
 const AnimeView = resolve => require(['./views/BaseAnimeView.vue'],resolve);
 const AnimeDetailView = resolve => require(['./views/BaseAnimeDetailView.vue'],resolve);
+
 const StarView = resolve => require(['./views/BaseStarView.vue'],resolve);
+const StarDetailView = resolve => require(['./views/BaseStarDetailView.vue'],resolve);
+
 const FunnyView = resolve => require(['./views/BaseFunnyView.vue'],resolve);
 const NewView = resolve => require(['./views/BaseNewView.vue'],resolve);
 const SpecialView = resolve => require(['./views/BaseSpecialView.vue'],resolve);
@@ -91,6 +94,11 @@ let routes = [
                 name: 'SpecialView'
             }
         ]
+    },
+    {
+        path: '/starDetailView/:id',
+        component: StarDetailView,
+        name: 'StarDetailView'
     },
     {
         path: '/classify',

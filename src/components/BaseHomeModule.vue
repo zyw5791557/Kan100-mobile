@@ -60,10 +60,10 @@ export default {
                             </router-link>
                         </div>
                         <div class="piclist-title">
-                            <div class="c-title">
-                                <router-link class="text-ellipsis" :to="routeGuide(item)">{{ item.title }}</router-link>
+                            <div class="c-title" :class="{ 'text-ellipsis-2': loadData.ellipsis2 }">
+                                <router-link :class="{ 'text-ellipsis': !loadData.ellipsis2 }" :to="routeGuide(item)">{{ item.title }}</router-link>
                             </div>
-                            <div class="c-info">
+                            <div class="c-info"  v-if="item.des">
                                 <router-link class="text-ellipsis" :to="routeGuide(item)">{{ item.des }}</router-link>
                             </div>
                         </div>

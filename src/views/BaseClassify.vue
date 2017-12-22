@@ -189,7 +189,9 @@ export default {
     <div class="classify-container">
         <div class="classify">
             <header class="return-header">
-                <router-link to="/" class="return-icon"></router-link>
+                <div @click="$router.back()" class="return-icon-box">
+                    <a href="javascript:void(0);" class="return-icon"></a>
+                </div>
                 <span class="return-title">电影</span>
                 <i class="search-icon"></i>
             </header>
@@ -294,14 +296,18 @@ export default {
         .return-title {
             font-weight: 600;
         }
-        .return-icon {
+        .return-icon-box {
             margin-left: .12963rem;
-            width: .222222rem;
-            height: .407407rem;
-            background-image: url('/static/images/back.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            padding: .266667rem;
+            padding-left: 0;
+        }
+        .return-icon {
+            display: block;
+            width: .31427rem;
+            height: .31427rem;
+            border-left: .037037rem solid #999;
+            border-bottom: .037037rem solid #999;
+            transform: rotate(45deg);
         }
         .search-icon {
             width: .37963rem;

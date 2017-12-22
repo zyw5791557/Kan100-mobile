@@ -103,7 +103,9 @@ export default {
     <div class="timeline-container">
         <div class="timeline">
             <header class="return-header">
-                <a @click="$router.back()" class="return-icon"></a>
+                <div @click="$router.back()" class="return-icon-box">
+                    <a class="return-icon"></a>
+                </div>
                 <span class="return-title">追番表</span>
                 <i></i>
             </header>
@@ -153,14 +155,18 @@ export default {
         .return-title {
             font-weight: 600;
         }
-        .return-icon {
+        .return-icon-box {
             margin-left: .12963rem;
-            width: .222222rem;
-            height: .407407rem;
-            background-image: url('/static/images/back.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            padding: .266667rem;
+            padding-left: 0;
+        }
+        .return-icon {
+            display: block;
+            width: .31427rem;
+            height: .31427rem;
+            border-left: .037037rem solid #999;
+            border-bottom: .037037rem solid #999;
+            transform: rotate(45deg);
         }
     }
 

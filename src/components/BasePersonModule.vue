@@ -10,6 +10,16 @@ export default {
         return {
             loadData: this.data
         }
+    },
+    methods: {
+        routeGuide(item) {
+            let o = {
+                name: this.loadData.itemRouteName ? this.loadData.itemRouteName : item.routeName,
+                params: { id: item.id },
+                query: { backEnable: this.loadData.backEnable }
+            };
+            return o;
+        }
     }
 }
 </script>
@@ -27,7 +37,7 @@ export default {
             <div class="person-container">
                 <ul class="person-wrapper">
                     <li v-for="(item,index) in loadData.personlistData" class="person-item">
-                        <router-link :to="item.url">
+                        <router-link :to="routeGuide(item)">
                             <img :src="item.img" alt="" width="100%">
                             <div class="c-title">{{ item.name }}</div>
                         </router-link>

@@ -43,6 +43,9 @@ export default {
         color: $baseColor;
         &:last-child {
             color: $orange;
+            &.noActive{
+                color: $baseColor;
+            }
         }
     }
 }

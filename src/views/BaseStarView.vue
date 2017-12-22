@@ -88,64 +88,65 @@ export default {
             ],
             personData: {
                 type: '热门明星',
+                itemRouteName: 'StarDetailView',
                 personlistData: [
                     {
-                        url: '/',
+                        id: 777,
+                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
+                        name: '范冰冰'
+                    },
+                    {
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
-                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
-                        name: '胡歌'
-                    },
-                    {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     }
@@ -197,42 +198,42 @@ export default {
                 headLinkIcon: 'more',
                 personlistData: [
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     }
@@ -244,42 +245,42 @@ export default {
                 headLinkIcon: 'more',
                 personlistData: [
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     }
@@ -291,42 +292,37 @@ export default {
                 headLinkIcon: 'more',
                 personlistData: [
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
-                        img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
-                        name: '胡歌'
-                    },
-                    {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     }
@@ -338,42 +334,42 @@ export default {
                 headLinkIcon: 'more',
                 personlistData: [
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     },
                     {
-                        url: '/',
+                        id: 777,
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
                         name: '胡歌'
                     }
