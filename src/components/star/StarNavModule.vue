@@ -81,6 +81,7 @@ export default {
         height: 1.055556rem;
         display: flex;
         justify-content: space-between;
+        border-bottom: $moduleBorder;
         .content {
             width: 100%;
         }
