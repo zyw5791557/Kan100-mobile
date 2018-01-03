@@ -24,48 +24,61 @@ export default {
     },
     data () {
         return {
-            bannerModuleData: [
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+            bannerModuleData: {
+                backEnable: true,
+                piclistData: [
+                    // 电影
+                    {
+                        id: 123456,
+                        routeName: 'MovieDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 电视剧
+                    {
+                        id: 123456,
+                        routeName: 'TeleplayDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 综艺
+                    {
+                        id: 123456,
+                        routeName: 'ShowDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 动漫
+                    {
+                        id: 123456,
+                        routeName: 'AnimeDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 明星
+                    {
+                        id: 123456,
+                        routeName: 'StarDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
                     }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171207/cc8272ed60db47c3831bdb1cb807f6df.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                }
-            ],
+                ]
+            },
             navTypeModuleData: [
                 {
                     name: '科幻',
@@ -156,9 +169,11 @@ export default {
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 routerName: 'Classify',
+                backEnable: true,
+                itemRouteName: 'MovieDetailView',
                 piclistData: [
                     {   
-                        url: '/home',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -167,7 +182,7 @@ export default {
                         des: '中外巨星汇聚长城打怪兽',
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -176,7 +191,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -185,7 +200,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -194,7 +209,7 @@ export default {
                         des: '彭于晏变身大圣勇斗天庭'
                     }, 
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -209,10 +224,12 @@ export default {
                 type: '热播榜',
                 headLinkName: '查看完整榜单',
                 rank: true,
+                backEnable: true,
+                itemRouteName: 'MovieDetailView',
                 piclistData: [
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -222,7 +239,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -232,7 +249,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -242,7 +259,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -252,7 +269,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -262,7 +279,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -272,7 +289,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -282,7 +299,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -297,10 +314,12 @@ export default {
                 type: '即将上线',
                 headLinkName: '',
                 rank: false,
+                backEnable: true,
+                itemRouteName: 'MovieDetailView',
                 piclistData: [
                     {
                         timeline: '12月02日',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
@@ -310,7 +329,7 @@ export default {
                     },
                     {
                         timeline: '12月03日',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
@@ -320,7 +339,7 @@ export default {
                     },
                     {
                         timeline: '12月04日',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
@@ -330,7 +349,7 @@ export default {
                     },
                     {
                         timeline: '12月05日',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
@@ -340,7 +359,7 @@ export default {
                     },
                     {
                         timeline: '12月06日',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
@@ -350,7 +369,7 @@ export default {
                     },
                     {
                         timeline: '12月07日',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
@@ -360,7 +379,7 @@ export default {
                     },
                     {
                         timeline: '12月08日',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
@@ -370,7 +389,7 @@ export default {
                     },
                     {
                         timeline: '12月09日',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '预告',
                         collect: '',
@@ -385,9 +404,11 @@ export default {
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,
+                backEnable: true,
+                itemRouteName: 'MovieDetailView',
                 piclistData: [
                     {   
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171208/861893f7ef154895af51f8e3f39d2323.jpg',
                         catname: '',
                         collect: '01:41',
@@ -396,7 +417,7 @@ export default {
                         des: '越野千里被野为什么用琴鸟都阿萨德阿萨德',
                     },
                     {   
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171208/861893f7ef154895af51f8e3f39d2323.jpg',
                         catname: '图文',
                         collect: '',
@@ -426,9 +447,11 @@ export default {
                 headLinkIcon: 'more',
                 routerName: 'Classify',
                 newsModule: true,
+                backEnable: true,
+                itemRouteName: 'MovieDetailView',
                 piclistData: [
                     {   
-                        url: '/home',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -437,7 +460,7 @@ export default {
                         des: '中外巨星汇聚长城打怪兽',
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -446,7 +469,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -455,7 +478,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -471,9 +494,11 @@ export default {
                 headLinkIcon: 'more',
                 routerName: 'Classify',
                 newsModule: true,
+                backEnable: true,
+                itemRouteName: 'MovieDetailView',
                 piclistData: [
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -482,7 +507,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -491,7 +516,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -500,7 +525,7 @@ export default {
                         des: '彭于晏变身大圣勇斗天庭'
                     }, 
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -516,9 +541,11 @@ export default {
                 headLinkIcon: 'more',
                 routerName: 'Classify',
                 newsModule: true,
+                backEnable: true,
+                itemRouteName: 'MovieDetailView',
                 piclistData: [
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -527,7 +554,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -536,7 +563,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -545,7 +572,7 @@ export default {
                         des: '彭于晏变身大圣勇斗天庭'
                     }, 
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -561,9 +588,11 @@ export default {
                 headLinkIcon: 'more',
                 routerName: 'Classify',
                 newsModule: true,
+                backEnable: true,
+                itemRouteName: 'MovieDetailView',
                 piclistData: [
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -572,7 +601,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -581,7 +610,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -590,7 +619,7 @@ export default {
                         des: '彭于晏变身大圣勇斗天庭'
                     }, 
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',

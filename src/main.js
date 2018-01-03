@@ -39,7 +39,10 @@ router.beforeEach((to, from, next) => {
 })
 // 路由后置守卫
 router.afterEach((to, from) => {
+	// 进度条完成
 	NProgress.done();
+	// 路由跳转后滚动条置顶
+	window.scrollTo(0,0);
 })
 
 

@@ -2,7 +2,7 @@
 export default {
     props: {
         data: {
-            type: Array,
+            type: Object,
             required: true
         }
     },
@@ -27,6 +27,14 @@ export default {
                     clickable: true,
                 },
             });  
+        },
+        routeGuide(item) {
+            let o = {
+                name: this.loadData.itemRouteName ? this.loadData.itemRouteName : item.routeName,
+                params: { id: item.id },
+                query: { backEnable: this.loadData.backEnable }
+            };
+            return o;
         }
     },
     mounted() {
@@ -41,13 +49,13 @@ export default {
     <section class="base-banner" v-once>
 		<div class="swiper-container" id="banner-swiper--home">
 			<div class="swiper-wrapper">
-				<div v-for="(item,index) in loadData" :key="index" class="swiper-slide" title="" >
-                    <a :href="item.url" :style="`background-image: url(${item.img})`">
+				<div v-for="(item,index) in loadData.piclistData" :key="index" class="swiper-slide" title="" >
+                    <router-link :to="routeGuide(item)" :style="`background-image: url(${item.img})`">
                         <div class="c-lb">
                             <h3>{{ item.content.title }}</h3>
-                            <p class="text-ellipsis">{{ item.content.dec }}</p>
+                            <p class="text-ellipsis">{{ item.content.des }}</p>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
 			</div>
             <!-- 如果需要分页器 -->

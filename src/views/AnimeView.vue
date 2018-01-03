@@ -1,118 +1,109 @@
 <script>
 import BaseBanner from '../components/BaseBanner';
-import BaseNavTypeModule from '../components/BaseNavTypeModule';
 import BaseHotModule from '../components/BaseHotModule';
 import BasePersonSwiperModule from '../components/BasePersonSwiperModule';
 import BaseHomeModule from '../components/BaseHomeModule';
+import BaseSwiperModule from '../components/BaseSwiperModule';
 /**@data
- * bannerModuleData         轮播数据
- * navTypeModuleData        综艺细分类型导航   
- * personData               近期大势综艺咖
- * hotModuleData            全网热播
+ * bannerModuleData         轮播数据 
+ * personData               动漫人物导航
+ * hotModuleData            强档推荐
  * latestModuleData         最新更新
- * gossipModuleData         明星八卦
- * inlandModuleData         内地综艺
- * HKTWModuleData           港台综艺
- * JKModuleData             日韩综艺
- * OAModuleData             欧美综艺
+ * timelineSwiperModuleData 今日放送(To.追番表)
+ * animeMovieModuleData     动画电影
+ * JanimeModuleData         日漫番剧
+ * CanimeModuleData         国产动漫
+ * childAnimeModuleData     少儿动漫
+ * OAAnimeModuleData             欧美动漫
  */
 export default {
     components: {
         BaseBanner,
-        BaseNavTypeModule,
         BaseHotModule,
         BasePersonSwiperModule,
-        BaseHomeModule
+        BaseHomeModule,
+        BaseSwiperModule
     },
     data () {
         return {
-            bannerModuleData: [
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171211/794b427135a44a1bbb951eb5c6688a39.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+            bannerModuleData: {
+                backEnable: true,
+                piclistData: [
+                    // 电影
+                    {
+                        id: 123456,
+                        routeName: 'MovieDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 电视剧
+                    {
+                        id: 123456,
+                        routeName: 'TeleplayDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 综艺
+                    {
+                        id: 123456,
+                        routeName: 'ShowDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 动漫
+                    {
+                        id: 123456,
+                        routeName: 'AnimeDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 明星
+                    {
+                        id: 123456,
+                        routeName: 'StarDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
                     }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171211/794b427135a44a1bbb951eb5c6688a39.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171211/794b427135a44a1bbb951eb5c6688a39.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171211/794b427135a44a1bbb951eb5c6688a39.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/common/lego/20171211/794b427135a44a1bbb951eb5c6688a39.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                }
-            ],
-            navTypeModuleData: [
-                {
-                    name: '真人秀',
-                    routerName: ''
-                },
-                {
-                    name: '竞技',
-                    routerName: ''
-                },
-                {
-                    name: '音乐',
-                    routerName: ''
-                },
-                {
-                    name: '情感',
-                    routerName: ''
-                },
-                {
-                    name: '全部',
-                    routerName: ''
-                }
-            ],
+                ]
+            },
             personData: {
-                type: '近期大势综艺咖',
-                fire: true,
+                type: '',
+                pd: true,
                 personlistData: [
                     {
                         url: '/',
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
-                        name: '胡歌'
+                        name: '银狐'
                     },
                     {
                         url: '/',
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
-                        name: '胡歌'
+                        name: '火影忍者'
                     },
                     {
                         url: '/',
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
-                        name: '胡歌'
+                        name: '海贼王'
                     },
                     {
                         url: '/',
                         img: 'http://m.qiyipic.com/common/lego/20171125/a9f86ee193fd4cd2bfd6323c796f37b0.jpg',
-                        name: '胡歌'
+                        name: '柯南'
                     },
                     {
                         url: '/',
@@ -147,21 +138,20 @@ export default {
                 ]
             },
             hotModuleData: {
-                type: '全网热播',
-                backEnable: true,
-                itemRouteName: 'ShowDetailView',
+                type: '强档推荐',
+                itemRouteName: 'AnimeDetailView',
                 piclistData: [
                     {   
-                        id: 121212,
+                        id: 666666,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '1080P',
                         collect: '更新至21集',
                         score: '',
-                        title: '演员的诞生',
+                        title: '名侦探柯南',
                         des: '看丘吉尔霸气强怼国王'
                     },
                     {
-                        id: 121212,
+                        id: 666666,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -170,7 +160,7 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        id: 121212,
+                        id: 666666,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -179,7 +169,7 @@ export default {
                         des: '章子怡：只有她会这样对我'
                     },
                     {
-                        id: 121212,
+                        id: 666666,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '新片',
                         collect: '',
@@ -188,7 +178,7 @@ export default {
                         des: '吴宇森展教科书式暴力美学'
                     },
                     {
-                        id: 121212,
+                        id: 666666,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -205,7 +195,7 @@ export default {
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '/home',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -214,7 +204,7 @@ export default {
                         des: '中外巨星汇聚长城打怪兽',
                     },
                     {   
-                        url: '/home',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -223,7 +213,7 @@ export default {
                         des: '中外巨星汇聚长城打怪兽',
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -232,7 +222,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -241,7 +231,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -250,7 +240,7 @@ export default {
                         des: '彭于晏变身大圣勇斗天庭'
                     }, 
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -260,14 +250,98 @@ export default {
                     }
                 ]
             },
-			gossipModuleData: {
-                type: '明星八卦',
+            
+            timelineSwiperModuleData: {
+                id: '001',
+                type: '每日放送',
+                headLinkName: '查看追番表',
+                headLinkIcon: 'more',
+                routerName: 'Timeline',
+                rank: false,
+                selectBtn: true,
+                piclistData: [
+                    {
+                        id: 123456,
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        id: 123456,
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        id: 123456,
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        id: 123456,
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        id: 123456,
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        id: 123456,
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        id: 123456,
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    },
+                    {
+                        id: 123456,
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.2',
+                        title: '青春逗',
+                        des: '期待指数：100%',
+                    }
+                ]
+            },
+			animeMovieModuleData: {
+                type: '动画电影',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '/home',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -276,7 +350,7 @@ export default {
                         des: '中外巨星汇聚长城打怪兽',
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -285,7 +359,42 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
+                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '8.9',
+                        title: '空天猎',
+                        des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
+                    }
+                ]
+            },
+			JanimeModuleData: {
+                type: '日漫番剧',
+                headLinkName: '更多',
+                headLinkIcon: 'more',
+                newsModule: true,
+                piclistData: [
+                    {   
+                        id: 123456,
+                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '9.7',
+                        title: '长城·免费首播',
+                        des: '中外巨星汇聚长城打怪兽',
+                    },
+                    {
+                        id: 123456,
+                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
+                        catname: '',
+                        collect: '',
+                        score: '8.2',
+                        title: '星际特工：千里之城之',
+                        des: '蕾哈娜上演变装热舞秀'
+                    },
+                    {
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -294,7 +403,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -304,14 +413,14 @@ export default {
                     }
                 ]
             },
-			inlandModuleData: {
-                type: '内地综艺',
+			CanimeModuleData: {
+                type: '国产动漫',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '/home',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -320,7 +429,7 @@ export default {
                         des: '中外巨星汇聚长城打怪兽',
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -329,7 +438,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -338,7 +447,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -348,14 +457,14 @@ export default {
                     }
                 ]
             },
-			HKTWModuleData: {
-                type: '港台综艺',
+			childAnimeModuleData: {
+                type: '少儿动漫',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '/home',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -364,7 +473,7 @@ export default {
                         des: '中外巨星汇聚长城打怪兽',
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -373,7 +482,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -382,7 +491,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -392,14 +501,14 @@ export default {
                     }
                 ]
             },
-			JKModuleData: {
-                type: '日韩综艺',
+			OAAnimeModuleData: {
+                type: '欧美动漫',
                 headLinkName: '更多',
                 headLinkIcon: 'more',
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '/home',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -408,7 +517,7 @@ export default {
                         des: '中外巨星汇聚长城打怪兽',
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -417,7 +526,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -426,51 +535,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
-                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '7.9',
-                        title: '悟空传',
-                        des: '彭于晏变身大圣勇斗天庭'
-                    }
-                ]
-            },
-			OAModuleData: {
-                type: '欧美综艺',
-                headLinkName: '更多',
-                headLinkIcon: 'more',
-                newsModule: true,
-                piclistData: [
-                    {   
-                        url: '/home',
-                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '9.7',
-                        title: '长城·免费首播',
-                        des: '中外巨星汇聚长城打怪兽',
-                    },
-                    {
-                        url: '',
-                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.2',
-                        title: '星际特工：千里之城之',
-                        des: '蕾哈娜上演变装热舞秀'
-                    },
-                    {
-                        url: '',
-                        img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
-                        catname: '',
-                        collect: '',
-                        score: '8.9',
-                        title: '空天猎',
-                        des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
-                    },
-                    {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/image/20171208/16/14/v_114204071_m_601_284_160.jpg',
                         catname: '',
                         collect: '',
@@ -488,15 +553,15 @@ export default {
 <template>
     <div class="container">
         <base-banner :data="bannerModuleData"></base-banner>
-        <base-nav-type-module :data="navTypeModuleData"></base-nav-type-module>
         <base-person-swiper-module :data="personData"></base-person-swiper-module>
 		<base-home-module :data="hotModuleData"></base-home-module>
 		<base-hot-module :data="latestModuleData"></base-hot-module>
-        <base-hot-module :data="gossipModuleData"></base-hot-module>
-        <base-hot-module :data="inlandModuleData"></base-hot-module>
-        <base-hot-module :data="HKTWModuleData"></base-hot-module>
-        <base-hot-module :data="JKModuleData"></base-hot-module>
-        <base-hot-module :data="OAModuleData"></base-hot-module>
+        <base-swiper-module :data="timelineSwiperModuleData"></base-swiper-module>
+        <base-home-module :data="animeMovieModuleData"></base-home-module>
+        <base-hot-module :data="JanimeModuleData"></base-hot-module>
+        <base-hot-module :data="CanimeModuleData"></base-hot-module>
+        <base-hot-module :data="childAnimeModuleData"></base-hot-module>
+        <base-hot-module :data="OAAnimeModuleData"></base-hot-module>
     </div>
 </template>
 

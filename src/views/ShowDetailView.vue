@@ -1,13 +1,12 @@
 <script>
 import BaseWikiModule from '@/components/BaseWikiModule';
 import BaseSelectItem from '@/components/popup/BaseSelectItem';
-import BaseNumCollectSwiperModule from '@/components/BaseNumCollectSwiperModule';
+import BaseImgPlaySwiperModule from '@/components/BaseImgPlaySwiperModule';
 import BaseSwiperModule from '@/components/BaseSwiperModule';
 import BasePersonSwiperModule from '@/components/BasePersonSwiperModule';
 import BaseClipsModule from '@/components/BaseClipsModule';
 import BaseHotModule from '@/components/BaseHotModule';
 import BaseClipsItem from '@/components/popup/BaseClipsItem';
-import BaseNumCollectItem from '@/components/popup/BaseNumCollectItem';
 /**
  * @data
  * wikiData         百科
@@ -22,27 +21,26 @@ export default {
     components: {
         BaseWikiModule,
         BaseSelectItem,
-        BaseNumCollectSwiperModule,
+        BaseImgPlaySwiperModule,
         BaseSwiperModule,
         BasePersonSwiperModule,
         BaseClipsModule,
         BaseHotModule,
-        BaseClipsItem,
-        BaseNumCollectItem
+        BaseClipsItem
     },
     data () {
         return {
             wikiData: {
-                img: '/static/images/wiki-show_123457.jpg',
-                title: '猎场·TV版',
+                img: '/static/images/wiki-show_123458.jpg',
+                title: '演员的诞生 第一季',
                 meta: '',
-                score: '8.9',
-                type: '剧情 爱情 都市',
-                release: '2017年07月19日上映·内地',
-                time: '共58集',
-                des: '郑秋冬是个为了理想坚持不懈的人，在好友老白和女友罗伊人的帮助下，事业逐渐有了起色，不想老白突然的去世与自己事业的一夜挫败，让郑秋冬危机重重，然而郑秋冬并不甘心，发愤图郑秋冬是个为了理想坚持不懈的人，在好友老白和女友罗伊人的帮助下，事业逐渐有了起色，不想老白突然的去世与自己事业的一夜挫败，让郑秋冬危机重重，然而郑秋冬并不甘心，发愤图',
-                default_source: 'qiyi',
-                default_source_title: '爱奇艺',
+                score: '9.2',
+                type: '明星真人秀/素人真人秀',
+                release: '2017年10月28日首播·内地',
+                time: '更新至2017-12-09期',
+                des: '以演技为唯一视角，邀请当今中国三位一线影帝影后坐镇演技之神，为有演技实力的平凡人搭建了一个与顶级影帝影后面对面切磋演技的真实平台。这里有一个个经典影视IP的完整还原，更.以演技为唯一视角，邀请当今中国三位一线影帝影后坐镇演技之神，为有演技实力的平凡人搭建了一个与顶级影帝影后面对面切磋演技的真实平台。这里有一个个经典影视IP的完整还原，更.',
+                default_source: 'youku',
+                default_source_title: '优酷',
                 sourceArr: [
                     {
                         name: '腾讯',
@@ -59,40 +57,81 @@ export default {
                 ]
             },
             playData: {
-                id: '001',
                 type: '选集',
                 headLinkIcon: 'arrow',
-                playlistData: [
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.baidu.com',
-                    'https://www.google.com.hk'
+                piclistData: [
+                    {
+                        url: 'https://www.emlice.top',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '20171125期',
+                        score: '',
+                        title: '章子怡吐槽柳是士大夫',
+                        des: '6187.6万次播放',
+                    },
+                    {
+                        url: 'https://www.emlice.top',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '20171125期',
+                        score: '',
+                        title: '章子怡吐槽柳是士大夫',
+                        des: '6187.6万次播放'
+                    },
+                    {
+                        url: 'https://www.emlice.top',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '20171125期',
+                        score: '',
+                        title: '章子怡吐槽柳是士大夫',
+                        des: '6187.6万次播放'
+                    },
+                    {
+                        url: 'https://www.emlice.top',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '20171125期',
+                        score: '',
+                        title: '章子怡吐槽柳是士大夫',
+                        des: '6187.6万次播放'
+                    },
+                    {
+                        url: 'https://www.emlice.top',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '20171125期',
+                        score: '',
+                        title: '章子怡吐槽柳是士大夫',
+                        des: '6187.6万次播放'
+                    },
+                    {
+                        url: 'https://www.emlice.top',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '20171125期',
+                        score: '',
+                        title: '章子怡吐槽柳是士大夫',
+                        des: '6187.6万次播放'
+                    },
+                    {
+                        url: 'https://www.emlice.top',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '20171125期',
+                        score: '',
+                        title: '章子怡吐槽柳是士大夫',
+                        des: '6187.6万次播放'
+                    },
+                    {
+                        url: 'https://www.emlice.top',
+                        img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
+                        catname: '',
+                        collect: '20171125期',
+                        score: '',
+                        title: '章子怡吐槽柳是士大夫',
+                        des: '6187.6万次播放'
+                    }
                 ]
             },
             playerData: {
@@ -338,7 +377,7 @@ export default {
                 piclistData: [
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -348,7 +387,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -358,7 +397,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -368,7 +407,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -378,7 +417,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -388,7 +427,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -398,7 +437,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -408,7 +447,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -425,7 +464,7 @@ export default {
                 piclistData: [
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -435,7 +474,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -445,7 +484,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -455,7 +494,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -465,7 +504,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -475,7 +514,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -485,7 +524,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -495,7 +534,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -523,6 +562,9 @@ export default {
         }
     },
     methods: {
+        
+    },
+    mounted () {
 
     }
 }
@@ -531,7 +573,7 @@ export default {
 <template>
     <div class="container">
         <base-wiki-module :data="wikiData" @popup="selectSourcePopupFlag=true,selectSourcePopupCloak=true;"></base-wiki-module>
-        <base-num-collect-swiper-module :data="playData" @popup="collectPopupFlag=true,collectPopupCloak=true;"></base-num-collect-swiper-module>  
+        <base-img-play-swiper-module :data="playData" @popup="collectPopupFlag=true,collectPopupCloak=true;"></base-img-play-swiper-module>  
         <base-person-swiper-module :data="playerData"></base-person-swiper-module>
         <base-clips-module :data="clipsData" @popup="clipsPopupFlag=true,clipsPopupCloak=true;"></base-clips-module>
         <base-hot-module :data="relatedData"></base-hot-module>
@@ -539,8 +581,8 @@ export default {
         <base-swiper-module :data="hotData"></base-swiper-module>
         <!-- popup -->
         <mt-popup
-            v-if="selectSourcePopupCloak"
-            v-model="selectSourcePopupFlag"
+            v-if="selectSourcePopupFlag"
+            v-model="selectSourcePopupCloak"
             position="bottom"
             class="selectSourcePopup">
             <base-select-item :data="playSource" @close="selectSourcePopupFlag=false"></base-select-item>
@@ -550,7 +592,7 @@ export default {
             v-model="collectPopupFlag"
             position="bottom"
             class="collectPopup">
-            <base-num-collect-item :data="playData" @close="collectPopupFlag=false"></base-num-collect-item>
+            <base-clips-item :data="playData" @close="collectPopupFlag=false"></base-clips-item>
         </mt-popup>
         <mt-popup
             v-if="clipsPopupCloak"

@@ -7,88 +7,88 @@ export default {
     data () {
         return {
             classifyData: {
-                stat0Data: ['电影','电视剧','综艺','动漫','搞笑'],
-                stat1Data: ['犯罪','爱情','悬疑','惊悚','科幻','动画'],
-                stat2Data: ['大陆','香港','美国','印度','泰国','韩国'],
-                stat3Data: [2017, 2016, 2015, 2014, 2013, 2012],
-                stat4Data: ['最近热播','最新播出','11月热映','09月热映']
+                nav: ['电影','电视剧','综艺','动漫','搞笑'],
+                type: ['犯罪','爱情','悬疑','惊悚','科幻','动画'],
+                area: ['大陆','香港','美国','印度','泰国','韩国'],
+                time: [2017, 2016, 2015, 2014, 2013, 2012],
+                sort: ['最近热播','最新播出']
             },
             selectStat: {
-                stat0: '电影',
-                stat1: '犯罪',
-                stat2: '美国',
-                stat3: '全部',
-                stat4: '最新播出'
+                nav: '电影',
+                type: '犯罪',
+                area: '美国',
+                time: '全部',
+                sort: '最新播出'
             },
             resData: [
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
                 },
                 {
-                    url: '',
+                    id: 123456,
                     img: 'http://pic9.qiyipic.com/image/20170713/38/3a/v_112258492_m_601_m3_195_260.jpg',
                     score: '9.3',
                     title: '青春逗'
@@ -105,29 +105,39 @@ export default {
             return val.substr(-1);
         }
     },
+    watch: {
+        '$route' (to,from) {
+
+        }
+    },
     methods: {
         init() {
-            let stat0 = new Swiper('#stat0-swiper', {
+            this.$refs.navSwiper && 
+            new Swiper(this.$refs.navSwiper, {
                 freeMode: true,
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto'
             });
-            let stat1 = new Swiper('#stat1-swiper', {
+            this.$refs.typeSwiper &&
+            new Swiper(this.$refs.typeSwiper, {
                 freeMode: true,
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto'
             });
-            let stat2 = new Swiper('#stat2-swiper', {
+            this.$refs.areaSwiper && 
+            new Swiper(this.$refs.areaSwiper, {
                 freeMode: true,
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto'
             });
-            let stat3 = new Swiper('#stat3-swiper', {
+            this.$refs.timeSwiper &&
+            new Swiper(this.$refs.timeSwiper, {
                 freeMode: true,
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto'
             });
-            let stat4 = new Swiper('#stat4-swiper', {
+            this.$refs.sortSwiper &&
+            new Swiper(this.$refs.sortSwiper, {
                 freeMode: true,
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto'
@@ -138,37 +148,37 @@ export default {
             setTimeout(() => {
                 var mockData = [
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://pic9.qiyipic.com/image/20170629/64/cf/v_106612240_m_601_m3_195_260.jpg',
                         score: '9.9',
                         title: '我是加载出来的'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://pic9.qiyipic.com/image/20170629/64/cf/v_106612240_m_601_m3_195_260.jpg',
                         score: '9.9',
                         title: '我是加载出来的'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://pic9.qiyipic.com/image/20170629/64/cf/v_106612240_m_601_m3_195_260.jpg',
                         score: '9.9',
                         title: '我是加载出来的'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://pic9.qiyipic.com/image/20170629/64/cf/v_106612240_m_601_m3_195_260.jpg',
                         score: '9.9',
                         title: '我是加载出来的'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://pic9.qiyipic.com/image/20170629/64/cf/v_106612240_m_601_m3_195_260.jpg',
                         score: '9.9',
                         title: '我是加载出来的'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://pic9.qiyipic.com/image/20170629/64/cf/v_106612240_m_601_m3_195_260.jpg',
                         score: '9.9',
                         title: '我是加载出来的'
@@ -177,6 +187,13 @@ export default {
                 this.resData = this.resData.concat(mockData);
                 this.loading = false;
             }, 2500);
+        },
+        select (type,val) {
+            if(type === 'nav') {
+                this.selectStat[type] = val;
+            }else {
+                this.selectStat[type] = val;
+            }
         }
     },
     mounted () {
@@ -196,50 +213,50 @@ export default {
                 <i class="search-icon"></i>
             </header>
             <section class="classify-list">
-                <div class="swiper-container" id="stat0-swiper">
+                <div v-if="classifyData.nav" class="swiper-container" ref="navSwiper" id="stat0-swiper">
                     <ul class="swiper-wrapper">
-                        <li v-for="(item,index) in classifyData.stat0Data" class="swiper-slide">
-                            <a :class="{ active: selectStat.stat0 === item }" @click="selectStat.stat0 = item" href="javascript:void(0);">{{ item }}</a>
+                        <li v-for="(item,index) in classifyData.nav" class="swiper-slide">
+                            <a :class="{ active: selectStat.nav === item }" @click="select('nav',item)" href="javascript:void(0);">{{ item }}</a>
                         </li>
                     </ul>
                 </div>
-                <div class="swiper-container" id="stat1-swiper">
+                <div v-if="classifyData.type" class="swiper-container" ref="typeSwiper" id="stat1-swiper">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
-                            <a :class="{ active: selectStat.stat1 === '全部' }" @click="selectStat.stat1 = '全部'" href="javascript:void(0);">全部</a>
+                            <a :class="{ active: selectStat.type === '全部' }" @click="select('type','全部')" href="javascript:void(0);">全部</a>
                         </li>
-                        <li v-for="(item,index) in classifyData.stat1Data" class="swiper-slide">
-                            <a :class="{ active: selectStat.stat1 === item }" @click="selectStat.stat1 = item" href="javascript:void(0);">{{ item }}</a>
+                        <li v-for="(item,index) in classifyData.type" class="swiper-slide">
+                            <a :class="{ active: selectStat.type === item }" @click="select('type',item)" href="javascript:void(0);">{{ item }}</a>
                         </li>
                     </ul>
                 </div>
-                <div class="swiper-container" id="stat2-swiper">
+                <div v-if="classifyData.area" class="swiper-container" ref="areaSwiper" id="stat2-swiper">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
-                            <a :class="{ active: selectStat.stat2 === '全部' }" @click="selectStat.stat2 = '全部'" href="javascript:void(0);">全部</a>
+                            <a :class="{ active: selectStat.area === '全部' }" @click="select('area','全部')" href="javascript:void(0);">全部</a>
                         </li>
-                        <li v-for="(item,index) in classifyData.stat2Data" class="swiper-slide">
-                            <a :class="{ active: selectStat.stat2 === item }" @click="selectStat.stat2 = item" href="javascript:void(0);">{{ item }}</a>
+                        <li v-for="(item,index) in classifyData.area" class="swiper-slide">
+                            <a :class="{ active: selectStat.area === item }" @click="select('area',item)" href="javascript:void(0);">{{ item }}</a>
                         </li>
                     </ul>
                 </div>
-                <div class="swiper-container" id="stat3-swiper">
+                <div v-if="classifyData.time" class="swiper-container" ref="timeSwiper" id="stat3-swiper">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
-                            <a :class="{ active: selectStat.stat3 === '全部' }" @click="selectStat.stat3 = '全部'" href="javascript:void(0);">全部</a>
+                            <a :class="{ active: selectStat.time === '全部' }" @click="select('time','全部')" href="javascript:void(0);">全部</a>
                         </li>
-                        <li v-for="(item,index) in classifyData.stat3Data" class="swiper-slide">
-                            <a :class="{ active: selectStat.stat3 === item }" @click="selectStat.stat3 = item" href="javascript:void(0);">{{ item }}</a>
+                        <li v-for="(item,index) in classifyData.time" class="swiper-slide">
+                            <a :class="{ active: selectStat.time === item }" @click="select('time',item)" href="javascript:void(0);">{{ item }}</a>
                         </li>
                     </ul>
                 </div>
-                <div class="swiper-container" id="stat4-swiper">
+                <div v-if="classifyData.sort" class="swiper-container" ref="sortSwiper" id="stat4-swiper">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
-                            <a :class="{ active: selectStat.stat4 === '全部' }" @click="selectStat.stat4 = '全部'" href="javascript:void(0);">全部</a>
+                            <a :class="{ active: selectStat.sort === '全部' }" @click="select('sort','全部')" href="javascript:void(0);">全部</a>
                         </li>
-                        <li v-for="(item,index) in classifyData.stat4Data" class="swiper-slide">
-                            <a :class="{ active: selectStat.stat4 === item }" @click="selectStat.stat4 = item" href="javascript:void(0);">{{ item }}</a>
+                        <li v-for="(item,index) in classifyData.sort" class="swiper-slide">
+                            <a :class="{ active: selectStat.sort === item }" @click="select('sort',item)" href="javascript:void(0);">{{ item }}</a>
                         </li>
                     </ul>
                 </div>

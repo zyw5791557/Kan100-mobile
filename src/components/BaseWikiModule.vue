@@ -97,6 +97,10 @@ export default {
         width: 100%;
         height: 100%;
         filter: blur(100px);
+        -webkit-filter: blur(100px);
+        -ms-filter: blur(100px);
+        -moz-filter: blur(100px);
+        -o-filter: blur(100px);
         background-repeat: no-repeat;
         background-position: center -2.666667rem;
         background-size: cover;

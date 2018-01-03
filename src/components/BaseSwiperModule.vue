@@ -32,6 +32,14 @@ export default {
                 slidesPerView: 'auto'
             });
         },
+        routeGuide(item) {
+            let o = {
+                name: this.loadData.itemRouteName ? this.loadData.itemRouteName : item.routeName,
+                params: { id: item.id },
+                query: { backEnable: this.loadData.backEnable }
+            };
+            return o;
+        },
         selectTabs(param,e) {
             var activeEle = document.querySelector('.m-tabs-item.active');
             if(activeEle) activeEle.classList.remove('active');
@@ -67,7 +75,7 @@ export default {
                             <span class="c-timeline">{{ item.timeline }}</span>
                         </div>
                         <div class="piclist-img">
-                            <router-link class="piclist-link" :to="item.url" :style="`background-image: url(${item.img})`">
+                            <router-link class="piclist-link" :to="routeGuide(item)" :style="`background-image: url(${item.img})`">
                                 <div class="c-rt">
                                     <i class="c-collect" v-if="item.catname">{{ item.catname }}</i>
                                 </div>
@@ -85,10 +93,10 @@ export default {
                         </div>
                         <div class="piclist-title">
                             <div class="c-title" :class="{ 'text-ellipsis-2': loadData.ellipsisLines }">
-                                <router-link :class="{ 'text-ellipsis': !(loadData.ellipsisLines) }" :to="item.url">{{ item.title }}</router-link>
+                                <router-link :class="{ 'text-ellipsis': !(loadData.ellipsisLines) }" :to="routeGuide(item)">{{ item.title }}</router-link>
                             </div>
                             <div class="c-info">
-                                <router-link class="text-ellipsis" :to="item.url">{{ item.des }}</router-link>
+                                <router-link class="text-ellipsis" :to="routeGuide(item)">{{ item.des }}</router-link>
                             </div>
                         </div>
                     </li>

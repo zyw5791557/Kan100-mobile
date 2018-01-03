@@ -944,7 +944,7 @@ export default {
                 piclistData: [
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -954,7 +954,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -964,7 +964,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -974,7 +974,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -984,7 +984,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -994,7 +994,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1004,7 +1004,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1014,7 +1014,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1031,7 +1031,7 @@ export default {
                 piclistData: [
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1041,7 +1041,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1051,7 +1051,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1061,7 +1061,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1071,7 +1071,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1081,7 +1081,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1091,7 +1091,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',
@@ -1101,7 +1101,7 @@ export default {
                     },
                     {
                         timeline: '',
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '',

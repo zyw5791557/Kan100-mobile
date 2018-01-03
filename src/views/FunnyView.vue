@@ -27,48 +27,61 @@ export default {
     },
     data () {
         return {
-            bannerModuleData: [
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/image/20171211/ad/f6/v_114238910_m_601_m1_480_270.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+            bannerModuleData: {
+                backEnable: true,
+                piclistData: [
+                    // 电影
+                    {
+                        id: 123456,
+                        routeName: 'MovieDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 电视剧
+                    {
+                        id: 123456,
+                        routeName: 'TeleplayDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 综艺
+                    {
+                        id: 123456,
+                        routeName: 'ShowDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 动漫
+                    {
+                        id: 123456,
+                        routeName: 'AnimeDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
+                    },
+                    // 明星
+                    {
+                        id: 123456,
+                        routeName: 'StarDetailView',
+                        img: 'http://m.qiyipic.com/common/lego/20171128/17107ac0abbe4236b160598ec6d0b9d5.jpg',
+                        content: {
+                            title: '独步天下',
+                            des: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
+                        }
                     }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/image/20171211/ad/f6/v_114238910_m_601_m1_480_270.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/image/20171211/ad/f6/v_114238910_m_601_m1_480_270.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/image/20171211/ad/f6/v_114238910_m_601_m1_480_270.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                },
-                {
-                    url: '',
-                    img: 'http://m.qiyipic.com/image/20171211/ad/f6/v_114238910_m_601_m1_480_270.jpg',
-                    content: {
-                        title: '独步天下',
-                        dec: '看到飙泪! 东哥与葛戴终于相认了东哥与葛戴按时打算大啥的'
-                    }
-                }
-            ],
+                ]
+            },
             personData: {
                 type: '',
                 pd: true,
@@ -131,7 +144,7 @@ export default {
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '电视剧',
                         collect: '更新至40集',
@@ -140,7 +153,7 @@ export default {
                         des: '郑秋冬拆骗局攻陈修风'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -149,7 +162,7 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -158,7 +171,7 @@ export default {
                         des: '章子怡：只有她会这样对我'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '新片',
                         collect: '',
@@ -167,7 +180,7 @@ export default {
                         des: '吴宇森展教科书式暴力美学'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '专题',
                         collect: '',
@@ -184,7 +197,7 @@ export default {
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '/home',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -193,7 +206,7 @@ export default {
                         des: '中外巨星汇聚长城打怪兽',
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -202,7 +215,7 @@ export default {
                         des: '蕾哈娜上演变装热舞秀'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -211,7 +224,7 @@ export default {
                         des: '李晨范冰冰激战恐怖分子恐怖扥自啊as的    '
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -220,7 +233,7 @@ export default {
                         des: '彭于晏变身大圣勇斗天庭'
                     }, 
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -229,7 +242,7 @@ export default {
                         des: '彭于晏变身大圣勇斗天庭'
                     }, 
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '',
@@ -246,7 +259,7 @@ export default {
                 rank: true,
                 piclistData: [
                     {
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '5:36',
@@ -255,7 +268,7 @@ export default {
                         des: '期待指数：100%',
                     },
                     {
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '5:36',
@@ -264,7 +277,7 @@ export default {
                         des: '期待指数：100%',
                     },
                     {
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '5:36',
@@ -273,7 +286,7 @@ export default {
                         des: '期待指数：100%',
                     },
                     {
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '5:36',
@@ -282,7 +295,7 @@ export default {
                         des: '期待指数：100%',
                     },
                     {
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '5:36',
@@ -291,7 +304,7 @@ export default {
                         des: '期待指数：100%',
                     },
                     {
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '5:36',
@@ -300,7 +313,7 @@ export default {
                         des: '期待指数：100%',
                     },
                     {
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '5:36',
@@ -309,7 +322,7 @@ export default {
                         des: '期待指数：100%',
                     },
                     {
-                        url: '/home/homeView',
+                        id: 123456,
                         img: 'http://pic3.qiyipic.com/common/lego/20171208/5672d497f03048d8a9fd346bb91c062b.jpg',
                         catname: '',
                         collect: '5:36',
@@ -326,7 +339,7 @@ export default {
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '电视剧',
                         collect: '更新至40集',
@@ -335,7 +348,7 @@ export default {
                         des: '郑秋冬拆骗局攻陈修风'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -344,7 +357,7 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -361,7 +374,7 @@ export default {
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '电视剧',
                         collect: '更新至40集',
@@ -370,7 +383,7 @@ export default {
                         des: '郑秋冬拆骗局攻陈修风'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -379,7 +392,7 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -388,7 +401,7 @@ export default {
                         des: '章子怡：只有她会这样对我'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -405,7 +418,7 @@ export default {
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '电视剧',
                         collect: '更新至40集',
@@ -414,7 +427,7 @@ export default {
                         des: '郑秋冬拆骗局攻陈修风'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -423,7 +436,7 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -432,7 +445,7 @@ export default {
                         des: '章子怡：只有她会这样对我'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -449,7 +462,7 @@ export default {
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '电视剧',
                         collect: '更新至40集',
@@ -458,7 +471,7 @@ export default {
                         des: '郑秋冬拆骗局攻陈修风'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -467,7 +480,7 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -476,7 +489,7 @@ export default {
                         des: '章子怡：只有她会这样对我'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -493,7 +506,7 @@ export default {
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '电视剧',
                         collect: '更新至40集',
@@ -502,7 +515,7 @@ export default {
                         des: '郑秋冬拆骗局攻陈修风'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -511,7 +524,7 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -520,7 +533,7 @@ export default {
                         des: '章子怡：只有她会这样对我'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -537,7 +550,7 @@ export default {
                 newsModule: true,
                 piclistData: [
                     {   
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '电视剧',
                         collect: '更新至40集',
@@ -546,7 +559,7 @@ export default {
                         des: '郑秋冬拆骗局攻陈修风'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '更新至22集',
@@ -555,7 +568,7 @@ export default {
                         des: '三角恋？组合你站谁你站谁你沾水啊啊啊啊'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
@@ -564,7 +577,7 @@ export default {
                         des: '章子怡：只有她会这样对我'
                     },
                     {
-                        url: '',
+                        id: 123456,
                         img: 'http://m.qiyipic.com/common/lego/20171204/5f2ffe54b5f841e08c91e32b8c3a7dfc.jpg',
                         catname: '',
                         collect: '11-28期',
