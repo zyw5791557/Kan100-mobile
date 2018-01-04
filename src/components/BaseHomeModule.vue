@@ -100,10 +100,10 @@ export default {
                     color: $orange;
                     font-size: 14px;
                     i.change {
-                        @include smallIcon('/static/images/change.png');
+                        @include smallIcon('../../static/images/change.png');
                     }
                     i.more {
-                        @include smallIcon('/static/images/more.png');
+                        @include smallIcon('../../static/images/more.png');
                     }
                 }
             }

@@ -167,7 +167,7 @@ export default {
                 display: block;
                 width: .925926rem;
                 height: .851852rem;
-                background: url('/static/images/moreLinks.png') no-repeat right center;
+                background: url('../../static/images/moreLinks.png') no-repeat right center;
                 background-size: .333333rem .305556rem;
             }
         }

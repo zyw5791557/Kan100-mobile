@@ -41,11 +41,11 @@ export default {
             <div class="flex-left">
                 <h2>{{ loadData.type }}</h2>
                 <div @click="sortCollect" class="sort-box">
-                    <a href="javascript:void(0);">排序</a>
-                    <span>
+                    <a href="javascript:void(0);">{{ sortFlag ? '倒序' : '正序' }}</a>
+                    <!-- <span>
                         <i :class="{ active: sortFlag }" class="fa fa-sort-asc" aria-hidden="true"></i>
                         <i :class="{ active: !sortFlag }" class="fa fa-sort-desc" aria-hidden="true"></i>
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <a @click="$emit('close')" class="close" href="javascript:void(0);"></a>
@@ -109,7 +109,7 @@ export default {
             width: .351852rem;
             height: .351852rem;
             padding: .266667rem 0 .266667rem .266667rem;
-            background-image: url('/static/images/close.png');
+            background-image: url('../../../static/images/close.png');
             background-position: right center;
             background-size: .351852rem .351852rem;
             background-repeat: no-repeat;

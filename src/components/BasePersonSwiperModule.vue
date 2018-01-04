@@ -105,7 +105,7 @@ export default {
             position: absolute;
             right: .092593rem;
             top: 0;
-            background-image: url('/static/images/fire.png');
+            background-image: url('../../static/images/fire.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;

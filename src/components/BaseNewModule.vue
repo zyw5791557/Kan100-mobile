@@ -95,7 +95,7 @@ export default {
                     color: $orange;
                     font-size: 14px;
                     i {
-                        @include smallIcon('/static/images/more.png');
+                        @include smallIcon('../../static/images/more.png');
                     }
                 }
             }

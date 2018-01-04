@@ -44,7 +44,7 @@ export default {
             display: block;
             width: 3.046296rem;
             height: .592593rem;
-            background-image: url('/static/images/logo.png');
+            background-image: url('../../static/images/logo.png');
             background-size: 100%;
         }
         .base-search {
@@ -67,7 +67,7 @@ export default {
                 width: .314815rem;
                 height: .314815rem;
                 margin-right: .342593rem;
-                background-image: url('/static/images/search-icon.png');
+                background-image: url('../../static/images/search-icon.png');
                 background-size: 100% 100%;
             }
         }

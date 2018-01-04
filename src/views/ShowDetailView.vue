@@ -31,7 +31,7 @@ export default {
     data () {
         return {
             wikiData: {
-                img: '/static/images/wiki-show_123458.jpg',
+                img: '../../static/images/wiki-show_123458.jpg',
                 title: '演员的诞生 第一季',
                 meta: '',
                 score: '9.2',
@@ -581,25 +581,22 @@ export default {
         <base-swiper-module :data="hotData"></base-swiper-module>
         <!-- popup -->
         <mt-popup
-            v-if="selectSourcePopupFlag"
             v-model="selectSourcePopupCloak"
             position="bottom"
             class="selectSourcePopup">
-            <base-select-item :data="playSource" @close="selectSourcePopupFlag=false"></base-select-item>
+            <base-select-item v-if="selectSourcePopupFlag" :data="playSource" @close="selectSourcePopupFlag=false"></base-select-item>
         </mt-popup>
         <mt-popup
-            v-if="collectPopupCloak"
             v-model="collectPopupFlag"
             position="bottom"
             class="collectPopup">
-            <base-clips-item :data="playData" @close="collectPopupFlag=false"></base-clips-item>
+            <base-clips-item v-if="collectPopupCloak" :data="playData" @close="collectPopupFlag=false" :watch="collectPopupFlag"></base-clips-item>
         </mt-popup>
         <mt-popup
-            v-if="clipsPopupCloak"
             v-model="clipsPopupFlag"
             position="bottom"
             class="clipsPopup">
-            <base-clips-item :data="clipsData" @close="clipsPopupFlag=false"></base-clips-item>
+            <base-clips-item v-if="clipsPopupCloak" :data="clipsData" @close="clipsPopupFlag=false" :watch="clipsPopupFlag"></base-clips-item>
         </mt-popup>
     </div>
 </template>

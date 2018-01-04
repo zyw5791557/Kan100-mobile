@@ -17,7 +17,7 @@ export default {
 <template>
     <footer class="footer" v-once>
         <div class="logo">
-            <img src="/static/images/footer-logo.png" alt="">
+            <img src="../../static/images/footer-logo.png" alt="">
         </div>
         <div class="cr">
             <p class="cr-des">{{ footerConfig.crDes }}</p>

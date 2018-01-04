@@ -11,6 +11,10 @@ import VueRouter from 'vue-router'
 // import store from './vuex/store'
 // import Vuex from 'vuex'
 
+// 移动端快速点击
+import FastClick from 'fastclick';
+FastClick.attach(document.body);
+
 // 进度条
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
@@ -25,8 +29,11 @@ Vue.use(api_port)
 Vue.use(VueRouter)
 // Vue.use(Vuex)
 
+
+
+
 const router = new VueRouter({
-	mode: 'history',       // 需要后台配置支持
+	mode: 'hash',       // 需要后台配置支持
 	routes
 })
 

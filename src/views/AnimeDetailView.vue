@@ -31,7 +31,7 @@ export default {
     data () {
         return {
             wikiData: {
-                img: '/static/images/wiki-show_123459.jpg',
+                img: '../../static/images/wiki-show_123459.jpg',
                 title: '名侦探柯南',
                 meta: '',
                 score: '9.8',
@@ -1142,31 +1142,28 @@ export default {
         <base-wiki-module :data="wikiData" @popup="selectSourcePopupFlag=true,selectSourcePopupCloak=true;"></base-wiki-module>
         <base-img-play-swiper-module :data="playData" @popup="collectPopupFlag=true,collectPopupCloak=true;"></base-img-play-swiper-module>  
         <base-person-swiper-module :data="playerData"></base-person-swiper-module>
-        <base-clips-module :data="clipsData" @popup="clipsPopupFlag=true,clipsPopupCloak=true;"></base-clips-module>
+        <base-clips-module :data="clipsData" @popup="clipsPopupFlag=true,clipsPopupCloak=true"></base-clips-module>
         <base-hot-module :data="relatedData"></base-hot-module>
         <base-swiper-module :data="similarData"></base-swiper-module>
         <base-swiper-module :data="hotData"></base-swiper-module>
         <!-- popup -->
         <mt-popup
-            v-if="selectSourcePopupFlag"
             v-model="selectSourcePopupCloak"
             position="bottom"
             class="selectSourcePopup">
-            <base-select-item :data="playSource" @close="selectSourcePopupFlag=false"></base-select-item>
+            <base-select-item v-if="selectSourcePopupFlag" :data="playSource" @close="selectSourcePopupFlag=false"></base-select-item>
         </mt-popup>
         <mt-popup
-            v-if="collectPopupCloak"
             v-model="collectPopupFlag"
             position="bottom"
             class="collectPopup">
-            <base-clips-item :data="playData" @close="collectPopupFlag=false"></base-clips-item>
+            <base-clips-item v-if="collectPopupCloak" :data="playData" @close="collectPopupFlag=false" :watch="collectPopupFlag"></base-clips-item>
         </mt-popup>
         <mt-popup
-            v-if="clipsPopupCloak"
             v-model="clipsPopupFlag"
             position="bottom"
             class="clipsPopup">
-            <base-clips-item :data="clipsData" @close="clipsPopupFlag=false"></base-clips-item>
+            <base-clips-item v-if="clipsPopupCloak" :data="clipsData" @close="clipsPopupFlag=false" :watch="clipsPopupFlag"></base-clips-item>
         </mt-popup>
     </div>
 </template>

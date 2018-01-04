@@ -894,7 +894,7 @@ export default {
             <!-- 组件在 vm.currentview 变化时改变！ -->
             <!-- 具名插槽 -->
             <div v-if="loading" class="loading" slot="loading">
-                <img v-show="loading" src="/static/images/loading.gif" width="100%" alt="">
+                <img v-show="loading" src="../../static/images/loading.gif" width="100%" alt="">
             </div>
         </component>
         <base-footer></base-footer>
@@ -916,7 +916,7 @@ export default {
         display: flex;
         width: 100%;
         height: 4.648148rem;
-        background-image: url('/static/images/star_777.jpg');
+        background-image: url('../../static/images/star_777.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

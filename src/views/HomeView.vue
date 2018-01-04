@@ -352,7 +352,8 @@ export default {
                         des: '章子怡上演宫廷版权力的游戏'
                     }
                 ]
-            }
+            },
+            popupVisible: false
         }
     }
 }
@@ -366,9 +367,20 @@ export default {
 		<base-home-module :data="teleplayModuleData"></base-home-module>
 		<base-home-module :data="showModuleData"></base-home-module>
 		<base-home-module :data="animeModuleData"></base-home-module>
+        <button style="width: 2rem;height: .5rem;" @click="popupVisible = true">出来吧~</button>
+        <mt-popup
+            class="ceshi"
+            v-model="popupVisible"
+            position="bottom">
+            <div style="min-height:10rem;">
+                啊啊啊啊啊啊啊测试啊
+            </div>
+        </mt-popup>
     </div>
 </template>
 
 <style lang="scss" scoped>
-    
+    .ceshi {
+        width: 100%;
+    }
 </style>

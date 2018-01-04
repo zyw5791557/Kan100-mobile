@@ -287,7 +287,7 @@ export default {
                 </ul>
             </section>
             <div class="loading">
-                <img v-show="loading" src="/static/images/loading.gif" width="100%" alt="">
+                <img v-show="loading" src="../../static/images/loading.gif" width="100%" alt="">
             </div>
         </div>
         <base-footer></base-footer>

@@ -4,6 +4,10 @@ export default {
         data: {
             type: Object,
             required: true
+        },
+        watch: {
+            type: Boolean,
+            required: true
         }
     },
     data () {
@@ -11,13 +15,22 @@ export default {
             loadData: this.data,
         }
     },
+    watch: {
+        watch (val) {
+            this.$nextTick(() => {
+                this.init();
+            });
+        }  
+    },
     methods: {
         init() {
+            console.log('初始化')
             new Swiper('#clips-swiper-module',{
                 direction: 'vertical',
                 freeMode: true,
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto',    
+                observer:true,
             });
         }
     },
@@ -27,6 +40,7 @@ export default {
         });
     },
     updated() {
+        this.init();
         console.log('组件更新')
     }
 }
@@ -89,7 +103,7 @@ export default {
             width: .351852rem;
             height: .351852rem;
             padding: .266667rem 0 .266667rem .266667rem;
-            background-image: url('/static/images/close.png');
+            background-image: url('../../../static/images/close.png');
             background-position: right center;
             background-size: .351852rem .351852rem;
             background-repeat: no-repeat;
@@ -98,6 +112,7 @@ export default {
     #clips-swiper-module {
         padding: .287037rem $gap 0;
         max-height: 10.87037rem;
+        .swiper-wrapper { flex-direction: column; }
         .swiper-slide {
             display: flex;
             justify-content: flex-start;
@@ -150,6 +165,7 @@ export default {
 }
 
 @include moduleFontSize('.popup-container');
+
 
 </style>
 

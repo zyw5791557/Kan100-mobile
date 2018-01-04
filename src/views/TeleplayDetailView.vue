@@ -33,7 +33,7 @@ export default {
     data () {
         return {
             wikiData: {
-                img: '/static/images/wiki-show_123457.jpg',
+                img: '../../static/images/wiki-show_123457.jpg',
                 title: '猎场·TV版',
                 meta: '',
                 score: '8.9',
@@ -553,11 +553,10 @@ export default {
             <base-num-collect-item :data="playData" @close="collectPopupFlag=false"></base-num-collect-item>
         </mt-popup>
         <mt-popup
-            v-if="clipsPopupCloak"
             v-model="clipsPopupFlag"
             position="bottom"
             class="clipsPopup">
-            <base-clips-item :data="clipsData" @close="clipsPopupFlag=false"></base-clips-item>
+            <base-clips-item v-if="clipsPopupCloak" :data="clipsData" @close="clipsPopupFlag=false" :watch="clipsPopupFlag"></base-clips-item>
         </mt-popup>
     </div>
 </template>
