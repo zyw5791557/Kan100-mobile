@@ -140,6 +140,7 @@ export default {
             hotModuleData: {
                 type: '强档推荐',
                 itemRouteName: 'AnimeDetailView',
+                backEnable: true,
                 piclistData: [
                     {   
                         id: 666666,

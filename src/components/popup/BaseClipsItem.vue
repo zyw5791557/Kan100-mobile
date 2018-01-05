@@ -4,23 +4,12 @@ export default {
         data: {
             type: Object,
             required: true
-        },
-        watch: {
-            type: Boolean,
-            required: true
         }
     },
     data () {
         return {
             loadData: this.data,
         }
-    },
-    watch: {
-        watch (val) {
-            this.$nextTick(() => {
-                this.init();
-            });
-        }  
     },
     methods: {
         init() {
@@ -31,6 +20,7 @@ export default {
                 freeModeMomentumRatio: 0.5,
                 slidesPerView: 'auto',    
                 observer:true,
+                observeParents: true
             });
         }
     },
@@ -38,10 +28,6 @@ export default {
         this.$nextTick(() => {
             this.init();
         });
-    },
-    updated() {
-        this.init();
-        console.log('组件更新')
     }
 }
 </script>

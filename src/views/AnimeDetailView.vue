@@ -1157,13 +1157,13 @@ export default {
             v-model="collectPopupFlag"
             position="bottom"
             class="collectPopup">
-            <base-clips-item v-if="collectPopupCloak" :data="playData" @close="collectPopupFlag=false" :watch="collectPopupFlag"></base-clips-item>
+            <base-clips-item v-if="collectPopupCloak" :data="playData" @close="collectPopupFlag=false"></base-clips-item>
         </mt-popup>
         <mt-popup
             v-model="clipsPopupFlag"
             position="bottom"
             class="clipsPopup">
-            <base-clips-item v-if="clipsPopupCloak" :data="clipsData" @close="clipsPopupFlag=false" :watch="clipsPopupFlag"></base-clips-item>
+            <base-clips-item v-if="clipsPopupCloak" :data="clipsData" @close="clipsPopupFlag=false"></base-clips-item>
         </mt-popup>
     </div>
 </template>
